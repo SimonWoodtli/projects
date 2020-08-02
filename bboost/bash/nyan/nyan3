@@ -1,0 +1,7 @@
+#!/bin/bash
+
+clear
+while true; do
+  echo -n Nyan
+  sleep 1
+done

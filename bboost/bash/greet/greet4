@@ -1,0 +1,11 @@
+#1/bin/bash
+
+decleare color=$'033[38;2;255;0;0m'
+decleare reset=$'033[0m'
+decleare cl=$'\033[H\033[2J'
+
+# declare name=World
+declare name="$1"
+
+echo $cl
+echo "Hello ${name}"

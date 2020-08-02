@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo $(rndcolor)"Do you like waffles?$(rndcolor)"
+read answer
+if [[ "$answer" == yes ]]; then
+  echo "Do you like pancakes?"
+fi
+
+echo $(rndcolor)"Okay then"

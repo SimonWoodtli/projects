@@ -1,0 +1,9 @@
+#!/bin/bash
+
+declare -r clear
+declare -r clear=$'\033[H\033[2J'
+clear
+while true; do
+  echo -n Nyan
+  sleep 1
+done

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+color=$'033[38;2;255;0;0m'
+reset=$'033[0m'
+cl=$'\033[H\033[2J'
+
+name="Rob Muhlestein"
+declare -i age=52
+
+#echo "{color}Hello ${reset}${name}Y}"
+printf "Number: %09.2f\n" .56

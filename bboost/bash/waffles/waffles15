@@ -1,0 +1,17 @@
+#!/bin/bash
+
+declare -r clear=$'\033[H\033[2J'
+declare -r white=$'\033[38;2;255;255;255m'
+declare -r red=$'\033[38;2;255;0;0m'
+declare -r green=$'\033[38;2;0;255;255m'
+declare -r blue=$'\033[38;2;0;0;255m'
+declare -r reset=$'\033[0m'
+
+echo "${clear}${green}Do you like waffles?${white}"
+read answer
+if [[ "${answer,,}" =~ ^y(e(s|p(pers)?|ah))?$ ]]; then
+  echo ${green}"Do you like pancakes?$reset"
+  read answer
+fi
+
+echo ${red}"Okay then"

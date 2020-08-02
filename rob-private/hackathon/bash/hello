@@ -1,0 +1,14 @@
+#!/bin/bash
+<<COMMENT
+echo "no running"
+COMMENT
+
+
+if TEST-COMMAND
+then
+  echo "Hello there"
+else
+  echo "Hello $1"
+fi
+
+

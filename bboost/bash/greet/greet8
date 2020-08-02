@@ -1,0 +1,12 @@
+#1/bin/bash
+
+source colors.bash
+
+_greet () {
+  declare name="${1:-World}"
+  echo "${green}Hello ${gold}${name}$reset"
+}
+
+read -p "${clear}${red}Hey there. What is your name again? ${white}" who
+
+_greet $who

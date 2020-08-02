@@ -1,0 +1,40 @@
+#!/bin/bash
+
+<<algorithm
+if there is NOT an argument print hi there and exit
+if argumen is rob or simon then print 'you rock' and exit
+print hi <argument> and exit
+algorithm
+
+<<mathprimer
+f(x) = 2 * x + 3
+f(2) = 2 * 2 + 3
+f(2) = 7
+hi(person) = echo "Hello $person"
+hi(Simon) = echo "Hello Simon"
+mathprimer
+
+if [[ -z "$1" ]]; then
+  echo "Hi there."
+  exit
+fi
+
+<<COOLWAY
+rocknames=(Rob Simon)
+for rock in ${rocknames[@]}; do
+  if [[ "$rock" == "$1" ]]; then
+    echo "You rock, $1."
+    exit
+  fi
+done
+COOLWAY
+
+if [[ "$1" == Rob || Simon ]];then
+  echo "You rock, $1."
+  exit
+fi
+
+## everything below has an argument
+
+echo "Hi $1."
+

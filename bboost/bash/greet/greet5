@@ -1,0 +1,8 @@
+#1/bin/bash
+
+greeet () {
+echo $cl
+echo "Hello ${name}"
+}
+
+greet Someone

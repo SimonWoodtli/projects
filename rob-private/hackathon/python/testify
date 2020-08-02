@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import testify as t
+
+def test_hello_world(self):
+    assert_equal
+
+if __name__ = "__main__":
+    run()

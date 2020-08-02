@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Do you like waffles?"
+read answer
+if [[ "$answer" == yes ]]; then
+  echo "Do you like pancakes?"
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+declare -r clear=$'\033[H\033[2J'
+declare -r grey=$'\033[38;2;100;100;100m'
+declare -r white=$'\033[38;2;255;255;255m'
+
+echo $clear
+while true; do
+  echo -n ${grey}Nyan${white}Cat
+  sleep .5
+done

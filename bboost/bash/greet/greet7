@@ -1,0 +1,11 @@
+#1/bin/bash
+
+greet () {
+  declare name="${1:-World}"
+  echo "Hello ${name}"
+}
+
+echo "${clear}Hey there. What is your name again?"
+read who
+
+greet $who
