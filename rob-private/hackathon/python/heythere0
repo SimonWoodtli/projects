@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import sys
+#Hey There
+#Create a program that prints Hey there by default or Hey there You if You is passed as an argument and Hey there You over there if 'You over there' is passed as the first argument (hint quotes).
+#[Variables, Parameters, Arguments, Formatted Printing]
+
+if len(sys.argv) == 1:
+    print("Hey there")
+else:
+    n = sys.argv[1]
+    print(f"Hey there {n}")
+
+

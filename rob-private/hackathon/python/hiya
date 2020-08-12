@@ -1,7 +1,0 @@
-#!/usr/bin/python3
-import sys
-#who = "you"
-
-who = sys.argv[1]
-
-print("hiya"+who)
