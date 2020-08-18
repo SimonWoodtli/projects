@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+import sys
+
+if len(sys.argv) == 1:
+    print("hey there")
+elif len(sys.argv) == 2 and "Rob" in sys.argv[1]:
+    l = sys.argv[1]
+    print("Woah " + "".join(l) + " you rock!")
+elif len(sys.argv) == 2 and "Simon" in sys.argv[1]:
+    l = sys.argv[1]
+    print("Woah " + "".join(l) + " you rock!")
+elif len(sys.argv) == 2 and "Dork" in sys.argv[1]:
+    l = sys.argv[1]
+    print("Um, no need to be rude.")
+else:
+    if len(sys.argv) == 2:
+        l = sys.argv[1]
+        print("Hey there " + "".join(l))
+
+
+#Create a program named hi that prints Hi there by default but prints Hi <arg> if there is a command line argument. If a one of two special names (like Linux and Rob) are passed then instead of the default the script should print something special like Woah <arg>, you rock! If a specific insult name (like Dork) is used the script should print Um, no need to be rude.
+#[Algorithms, Condition Statements, Boolean Logic and Operators]
+
+

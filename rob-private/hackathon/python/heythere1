@@ -2,8 +2,8 @@
 import sys
 
 if len(sys.argv) > 1:
-    print(f"Hey {sys.argv[1]}")
+    print(f"Hey there {sys.argv[1]}")
     exit()
 
-print("Hey")
+print("Hey there")
 
