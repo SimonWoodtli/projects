@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+import sys
+import time
+from termcolor import colored, cprint
+'''
+Write a command-line program that loops forever printing the word Nyan (or something).
+[Looping, Signals, Interrupts, Control-C, Printing to Same Line]
+'''
+
+while True:
+    text = colored('Hello, World!', 'red', attrs=['reverse', 'blink'])
+    print(text)
+    time.sleep(1)
+    cprint('Hello, World!', 'green', 'on_red')
