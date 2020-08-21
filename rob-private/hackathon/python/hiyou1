@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+## bluesky approach
+import sys
+
+if len(sys.argv) < 2:
+    print("Hi there.")
+    exit()
+
+if sys.argv[1] == "Rob" or sys.argv[1] == "Simon":
+    print(f"Woah {sys.argv[1]} you rock.")
+    exit()
+
+if sys.argv[1] == "Dork":
+    print(f"Um, no need to be rude.")
+    exit()
+
+print(f"Hi {sys.argv[1]}")
+
+
+#Create a program named hi that prints Hi there by default but prints Hi <arg> if there is a command line argument. If a one of two special names (like Linux and Rob) are passed then instead of the default the script should print something special like Woah <arg>, you rock! If a specific insult name (like Dork) is used the script should print Um, no need to be rude.
+#[Algorithms, Condition Statements, Boolean Logic and Operators]
+
+
