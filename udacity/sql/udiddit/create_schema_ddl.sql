@@ -1,4 +1,4 @@
--- comments table: need to add specific constraints later
+-- DDL for "comments" table:
 CREATE TABLE "comments" (
   "id" SERIAL,
   "user_id" INTEGER,
@@ -11,12 +11,13 @@ CREATE TABLE "comments" (
     REFERENCES "users" ("id") ON DELETE SET NULL,
   CONSTRAINT "comments_posts_FK_post_id" FOREIGN KEY ("post_id")
     REFERENCES "posts" ("id") ON DELETE CASCADE,
-  CONSTRAINT "comments_comments_FK_parent_comment_id" FOREIGN KEY ("parent_comment_id")
-    REFERENCES "comments" ("id") ON DELETE CASCADE,
+  CONSTRAINT "comments_comments_FK_parent_comment_id" FOREIGN KEY
+    ("parent_comment_id") REFERENCES "comments" ("id") ON DELETE CASCADE,
   CONSTRAINT "no_empty_comments" CHECK (LENGTH(TRIM("comment")) > 0)
 );
 
--- users table: need to add specific constraints later
+
+-- DDL for "users" table:
 CREATE TABLE "users" (
   "id" SERIAL,
   "username" VARCHAR(25),
@@ -26,7 +27,8 @@ CREATE TABLE "users" (
   CONSTRAINT "no_empty_usernames" CHECK (LENGTH(TRIM("username")) > 0)
 );
 
--- topics table: need to add specific constraints later
+
+-- DDL for "topics" table:
 CREATE TABLE "topics" (
   "id" SERIAL,
   "topic" VARCHAR(30),
@@ -38,7 +40,7 @@ CREATE TABLE "topics" (
 );
 
 
--- posts table: need to add specific constraints later
+-- DDL for "posts" table:
 CREATE TABLE "posts" (
   "id" SERIAL,
   "user_id" INTEGER,
@@ -56,12 +58,10 @@ CREATE TABLE "posts" (
   CONSTRAINT "allow_only_url_or_post" CHECK
     ((("url" = NULL OR "url" = '') AND ("post" != NULL OR "post" != ''))
     OR (("url" != NULL OR "url" != '') AND ("post" = NULL OR "post" = '')))
---  CONSTRAINT "delete_only_user_not_post" ON DELETE SET NULL ("user_id"),
 );
 
 
-
--- votes table: need to add specific constraints later
+-- DDL for "votes" table:
 CREATE TABLE "votes" (
   "id" SERIAL,
   "user_id" INTEGER,
@@ -72,9 +72,7 @@ CREATE TABLE "votes" (
     REFERENCES "users" ("id") ON DELETE SET NULL,
   CONSTRAINT "votes_posts_FK_post_id" FOREIGN KEY ("post_id")
     REFERENCES "posts" ("id") ON DELETE CASCADE,
-  CONSTRAINT "one_vote_per_user" UNIQUE ("user_id", "vote"),--(user_id,post_id) works too?
+  CONSTRAINT "one_vote_per_user" UNIQUE ("user_id", "vote"),
+    --(user_id,post_id) works too?
   CONSTRAINT "vote_values_binary" CHECK ("vote" = -1 OR "vote" = 1)
 );
-
-----------------------------------------------------------------------------------------------------
-
