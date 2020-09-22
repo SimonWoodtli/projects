@@ -1,23 +1,4 @@
--- DDL for "comments" table:
-CREATE TABLE "comments" (
-  "id" SERIAL,
-  "user_id" INTEGER,
-  "post_id" INTEGER,
-  "comment" TEXT,
-  "parent_comment_id" INTEGER,
-  "comment_created_at" TIMESTAMP,
-  CONSTRAINT "comments_PK" PRIMARY KEY ("id"),
-  CONSTRAINT "comments_users_FK_user_id" FOREIGN KEY ("user_id")
-    REFERENCES "users" ("id") ON DELETE SET NULL,
-  CONSTRAINT "comments_posts_FK_post_id" FOREIGN KEY ("post_id")
-    REFERENCES "posts" ("id") ON DELETE CASCADE,
-  CONSTRAINT "comments_comments_FK_parent_comment_id" FOREIGN KEY
-    ("parent_comment_id") REFERENCES "comments" ("id") ON DELETE CASCADE,
-  CONSTRAINT "no_empty_comments" CHECK (LENGTH(TRIM("comment")) > 0)
-);
-
-
--- DDL for "users" table:
+-- 1. DDL for "users" table:
 CREATE TABLE "users" (
   "id" SERIAL,
   "username" VARCHAR(25),
@@ -28,7 +9,7 @@ CREATE TABLE "users" (
 );
 
 
--- DDL for "topics" table:
+-- 2. DDL for "topics" table:
 CREATE TABLE "topics" (
   "id" SERIAL,
   "topic" VARCHAR(30),
@@ -40,7 +21,7 @@ CREATE TABLE "topics" (
 );
 
 
--- DDL for "posts" table:
+-- 3. DDL for "posts" table:
 CREATE TABLE "posts" (
   "id" SERIAL,
   "user_id" INTEGER,
@@ -61,7 +42,26 @@ CREATE TABLE "posts" (
 );
 
 
--- DDL for "votes" table:
+-- 4. DDL for "comments" table:
+CREATE TABLE "comments" (
+  "id" SERIAL,
+  "user_id" INTEGER,
+  "post_id" INTEGER,
+  "comment" TEXT,
+  "parent_comment_id" INTEGER,
+  "comment_created_at" TIMESTAMP,
+  CONSTRAINT "comments_PK" PRIMARY KEY ("id"),
+  CONSTRAINT "comments_users_FK_user_id" FOREIGN KEY ("user_id")
+    REFERENCES "users" ("id") ON DELETE SET NULL,
+  CONSTRAINT "comments_posts_FK_post_id" FOREIGN KEY ("post_id")
+    REFERENCES "posts" ("id") ON DELETE CASCADE,
+  CONSTRAINT "comments_comments_FK_parent_comment_id" FOREIGN KEY
+    ("parent_comment_id") REFERENCES "comments" ("id") ON DELETE CASCADE,
+  CONSTRAINT "no_empty_comments" CHECK (LENGTH(TRIM("comment")) > 0)
+);
+
+
+-- 5. DDL for "votes" table:
 CREATE TABLE "votes" (
   "id" SERIAL,
   "user_id" INTEGER,
@@ -72,7 +72,7 @@ CREATE TABLE "votes" (
     REFERENCES "users" ("id") ON DELETE SET NULL,
   CONSTRAINT "votes_posts_FK_post_id" FOREIGN KEY ("post_id")
     REFERENCES "posts" ("id") ON DELETE CASCADE,
-  CONSTRAINT "one_vote_per_user" UNIQUE ("user_id", "vote"),
-    --(user_id,post_id) works too?
+  CONSTRAINT "one_vote_per_user" UNIQUE ("post_id", "user_id"),
+    --(user_id, post_id) works too?
   CONSTRAINT "vote_values_binary" CHECK ("vote" = -1 OR "vote" = 1)
 );
