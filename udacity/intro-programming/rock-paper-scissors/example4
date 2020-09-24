@@ -1,0 +1,10 @@
+def play_game(self):
+    print("Game start!\nType 'q' to exit.\n")
+    while True:
+        rounds = input("How many rounds you would like to play?")
+        if rounds.ismumeric():
+            break
+        print("***That was not a number.Try again!***\n")
+
+    for round in range(int(rounds)):
+       self.play_round(

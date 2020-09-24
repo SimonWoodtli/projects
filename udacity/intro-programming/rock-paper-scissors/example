@@ -1,0 +1,181 @@
+#!/usr/bin/python3
+import random
+
+moves = ['rock', 'paper', 'scissors']
+
+class Player():
+
+def move(self):
+
+return moves[0]
+
+def learn(self, learn_move):
+
+pass
+
+class RandomPlayer(Player):
+
+def move(self):
+
+return (random.choice(moves))
+
+class ReflectPlayer(Player):
+
+def __init__(self):
+
+Player.__init__(self)
+
+self.learn_move = None
+
+def move(self):
+
+if self.their_move is None:
+
+return random.choice(moves)
+
+else:
+
+return self.their_move
+
+def learn (self, my_move,their_move):
+
+self.their_move = their_move
+
+class CyclePlayer(Player):
+
+def move(self):
+
+if self.my_move is None:
+
+return random.choice(moves)
+
+if p2 == "rock":
+
+return "paper"
+
+elif p2 == "scissors":
+
+return "paper"
+
+else:
+
+return "scissors"
+
+def learn(self,my_move,their_move):
+
+self.my_move = my_move
+
+class HumanPlayer(Player):
+
+def move(self):
+
+while True:
+
+Human = input("Rock, Paper or Scissors? ")
+
+if Human.lower() not in moves:
+
+print("Invalid input choose Rock, Paper or Scissors")
+
+else:
+
+return(f"You played {Human}")
+
+return(Human.lower(moves))
+
+class Game():
+
+p1_score = 0
+
+p2_score = 0
+
+def __init__(self, p1, p2):
+
+self.p1 = p1
+
+self.p2 = p2
+
+def play_round(self):
+
+move1 = self.p1.move()
+
+move2 = self.p2.move()
+
+print(f"Player 1: {move1} Player 2: {move2}")
+
+def beats(one, two):
+
+return ((one == 'rock' and two == 'scissors') or
+
+(one == 'scissors' and two == 'paper') or
+
+(one == 'paper' and two == 'rock'))
+
+if beats(move1, move2):
+
+self.p1_score += 1
+
+print("Player 1 wins")
+
+elif beats(move2, move1):
+
+self.p2_score += 1
+
+print("Player 2 wins")
+
+else:
+
+print("Tie!")
+
+print("The score is:")
+
+print(f"Player 1: {self.p1_score}")
+
+print(f"Player 2: {self.p2_score}")
+
+def play_game(self):
+
+print("Begin")
+
+for round in range(5):
+
+print(f"Round {round}:")
+
+self.play_round()
+
+print(f"Final score: Player 1: {self.p1_score}\tPlayer 2: {self.p2_score}")
+
+print("Game over!")
+
+if __name__ == '__main__':
+
+game= Game(HumanPlayer(), RandomPlayer())
+
+game.play_game()
+
+------------------------------------------------------------------------------------------------------
+## fix score issues:
+class Game():
+    p1_score = 0
+    p2_score = 0
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+    def play_round(self):
+        move1 = self.p1.move()
+        move2 = self.p2.move()
+        print(f"Player 1: {move1}")
+        print(f"Player 2: {move2}")
+        if beats(move1, move2):
+            self.p1_score += 1
+            print("Player 1 won!")
+        elif beats(move2, move1):
+            self.p2_score += 1
+            print("Player 2 won!")
+        else:
+            print("Tie!")
+        print("The current score is:")
+        print(f"Player 1: {self.p1_score}")
+        print(f"Player 2: {self.p2_score}")
+    def play_game(self):
+        # ...

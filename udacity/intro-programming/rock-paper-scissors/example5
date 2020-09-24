@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+import random
+import os
+import time
+p1score, p2score = 0, 0
+currentRound = 0
+winlist = ((0, 2), (1, 0), (2, 1))
+"""This program plays a game of Rock, Paper, Scissors between two Players,
+and reports both Player's scores each round."""
+moves = ['rock', 'paper', 'scissors']
+"""The Player class is the parent class for all of the Players
+in this game"""
+class Player:
+    def move(self):
+        return 'rock'
+
+    def learn(self, my_move, their_move):
+        pass
+class randomPlayer(Player):
+    def move(self):
+        throw = random.radiant(moves)
+        print("Computer chose: %s" % choice)
+        return throw
+def humanplayer():
+    def move (self):
+        while true:
+            move = input("Enter 0, 1, 2 for Rock, paper, Scissors").lower()
+            if move in moves:
+                return move
+            print("Invalid entry.")
+            choice = input("Enter 0, 1, 2, for Rock, Paper, Scissors")
+            return (throw)
+
+    def get_computer_choice():
+        choice = random.randint(0, 2)
+        print("Computer threw: %s" % choice)
+        return choice
+class ReflectPlayer(Player):
+    def __init__(self):
+        self.move_temp = "Rock"
+    def move(self):
+        return self.move_temp
+        if self.their_player is None:
+            return random.choice(moves)
+        return self.their_move
+class CyclePlayer(Player):
+    def move(self):
+        if self.my_move is None:
+            return random.choice(moves)
+
+        if p2 == "Rock":
+            return "paper"
+        elif p2 == "scissors":
+            return "Paper"
+        else:
+            return "scissors"
+def beats(one, two):
+    return ((one == 'rock' and two == 'scissors') or
+            (one == 'scissors' and two == 'paper') or
+            (one == 'paper' and two == 'rock'))
+class Game:
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+    def play_game(self):
+        print("Game start!")
+        for round in range(3):
+            print(f"Round {round}:")
+            self.do_round()
+        print("Game over!")
+    def other_method(self):
+        move1 = self.p1.move()
+        move2 = self.p2.move()
+    def do_round(self):
+        global currentRound, p1score, p2score
+        currentRound += 1
+        print (("\nPlayer1 Score: %s, Player2 Score: %s, Round: %s "
+                "press ctrlc+c to quit") % (p1score, p2score, currentRound))
+        p1_choice = self.p1
+        p2_choice = self.p2
+        if self.p1 == self.p2:
+            print("It's a tie.")
+        elif (self.p1, self.p2) in winlist:
+            p1score += 1
+            print("Player 1 wins round!")
+        else:
+            p2score += 1
+            print("Player 2 wins round!")
+            time.sleep(3)
+if __name__ == '__main__':
+
+    while True:
+        game = Game(humanplayer(), ReflectPlayer())
+        game.play_game()
+
+
+## comments
+## Lines 29 and 36: Use CamelCase style in class names:
+class RandomPlayer(Player):
+class HumanPlayer(Player): # Must be class, not def here!
+
+## Line 31: change "radiant" to choice;
+throw = random.choice(moves)
+
+## Line 32: change "choice" to "throw"
+print("Computer chose: %s" % throw)
+
+## Line 38: true must be capitalized:
+while True:
+
+## Lines 43 and 44 remove them.
+
+## Line 48: Add self statement in method:
+def get_computer_choice(self):
+
+## Line 59: If you keep the line: "return self.move_temp" the lines after it will not be read and executed.
+
+Lines 60, 62 and 67: The attributes "self.their_player", "self.their_move" and "self.my_move" not defined before use it.

@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+import time
+user_input = input("How many seconds do you want your timer to run: ")
+timer_start = time.perf_counter()
+time.sleep(int(user_input))
+timer_end = time.perf_counter()
+print("Time period for which timer actually run: ", timer_end - timer_start)

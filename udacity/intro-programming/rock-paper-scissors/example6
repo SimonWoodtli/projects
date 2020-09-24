@@ -1,0 +1,48 @@
+import random
+moves = random.randit['rock', 'paper', 'scissors']
+class Player1:
+	def move (self):
+		return 'rock'
+class RandomPlayer (Player)
+	def move (self):
+			return(randomchoice(moves))
+	def learn(self, my_move, thier_move):
+		pass
+def beats(one, two):
+	return((one == 'rock' and two == 'scissors') or
+				(one == 'scissors' and two == 'paper') or
+				(one == 'paper' and two == 'rock')
+
+class HumanPlayer (Player)
+	def _init_(self, p1, p2):
+			self.p1 = p1
+			self.p2 = p2
+
+## I suggest that you create four classes for the distinguished players in addition to the Player class. The Player class can be the parent class, so all other players can inherit the learn method from it.
+
+class Player:
+    # your code here
+class RandomPlayer(Player):
+    # your code here
+class HumanPlayer(Player):
+    # your code here
+class ReflectPlayer(Player):
+    # your code here
+class CyclePlayer(Player):
+    # your code here
+# and at the end
+class Game:
+    p1_score = 0
+    p2_score = 0
+    def __init__(self, p1, p2):
+        # your code here
+    def play_round(self):
+        # your code here
+    def play_game(self):
+        # your code here
+# to test the players
+if __name__ == '__main__':
+    p1 = HumanPlayer()
+    p2 = SomePlayerYouWant()
+    game = Game(p1, p2)
+    game.play_game()

@@ -1,0 +1,125 @@
+#!/usr/bin/python3
+"""This program plays a game of Rock, Paper, Scissors between two Players,
+and reports both Player's scores each round."""
+import random
+from termcolor import colored
+
+moves = ['rock', 'paper', 'scissors']
+
+"""The Player class is the parent class for all of the Players
+in this game"""
+
+
+def beats(one, two):
+
+    return ((one == 'rock' and two == 'scissors') or
+            (one == 'scissors' and two == 'paper') or
+            (one == 'paper' and two == 'rock'))
+
+
+class Player:
+    def move(self):
+        return 'rock'
+
+    def learn(self, their_move):
+        pass
+
+
+class Human(Player):
+    # human player
+    def move(self):
+        while True:
+            move = input("Please type your move: ")
+            if move in moves:
+                return move
+            else:
+                print("please insert a valid input")
+
+
+class IteratorP(Player):
+    # player that iterates over moves
+    def __init__(self):
+        self.count = 0
+
+    def move(self):
+        print(colored("Iterator", 'red'))
+        if self.count > 2:
+            self.count = 0
+        else:
+            move = moves[self.count]
+            self.count = + 1
+        return move
+
+
+class LastMoveP(Player):
+    # chooses the last move of the human player
+    def __init__(self):
+        self.their_move = random.choice(moves)
+
+    def learn(self, their_move):
+        self.their_move = their_move
+
+    def move(self):
+        print(colored("LastMovePlayer", 'blue'))
+        return self.their_move
+
+
+class RandomP(Player):
+    # player that chooses a random choice
+    def move(self):
+        print(colored("RandomPlayer", "yellow"))
+        return random.choice(moves)
+
+
+class Game:
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+        # scores initializers
+        self.scorep1 = 0
+        self.scorep2 = 0
+
+    def rounds(self):
+        while True:
+            self.rounds = input("How many rounds do you want to play?")
+            if self.rounds.isdigit():
+                return self.rounds
+            else:
+                print("please enter a valid number")
+
+    def play_round(self):
+        move1 = self.p1.move()
+        move2 = self.p2.move()
+        print(f"Player 1: {move1}  Player 2: {move2}")
+        if beats(move1, move2):
+            self.scorep1 += 1
+            print(colored("player 1 wins the round", "purple"))
+        elif move1 == move2:
+            print("this round is a tie!")
+        else:
+            self.scorep2 += 1
+            print(colored("Computer wins the round", "red"))
+        self.p2.learn(move1)
+        print(colored("Human Score: ", "green"), colored(self.scorep1, "blue"))
+        print("Computer Score: ", self.scorep2)
+
+    def play_game(self):
+        print("Game start!")
+        for round in range(int(self.rounds())):
+            print(f"Round {round}:")
+            self.play_round()
+        if self.scorep1 > self.scorep2:
+            print(colored("Human Wins the game!", "green"))
+        elif self.scorep1 == self.scorep2:
+            print(colored("TIEE", "green"))
+        else:
+            print(colored("Computer Wins!", "red"))
+        print(colored("Human Score: ", "green"), colored(self.scorep1, "red"))
+        print(colored("Computer score: ", "green"),
+              colored(self.scorep2, "red"))
+        print("Game over!")
+
+
+if __name__ == '__main__':
+    game = Game(Human(), random.choice([IteratorP(), RandomP(), LastMoveP()]))
+    game.play_game()
