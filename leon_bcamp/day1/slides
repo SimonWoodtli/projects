@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="sl-root decks show " data-account="" >
+  <head>
+    <meta charset="utf-8" />
+
+    <title>HTML - The Basics</title>
+    <meta name="description" content="Class 01 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta property="og:title" content="HTML - The Basics" />
+    <meta property="og:description" content="Class 01 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord" />
+    <meta property="og:site_name" content="Slides" />
+    <meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/a4053c4404f40a6b487563524ff9a6ef/thumb.jpg?1597083981" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://slides.com/leonnoel/html-the-basics" />
+    <meta property="fb:app_id" content="146002942236376" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="manifest" href="/manifest.json">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" type="text/css" data-application-font="inter">
+
+    <link rel="stylesheet" media="all" href="//assets.slid.es/assets/slides/slides-5463dbbad1a68c6e9a85872698fd43e74078271bfd42f08aadf3e7324137e99c.css" />
+    <link rel="stylesheet" media="all" href="//assets.slid.es/assets/application-f44f19368e26ce7b142c85f91cbedc3ea7ec094e3c1fbd9398b82992c5c2004b.css" />
+    	<link rel="stylesheet" media="all" href="//assets.slid.es/assets/deck-v2-decc9fc7e7d11e7781743b9cbd47c0d6b223b3ba2ee96c784d0f1355d5e8b1d5.css" />
+
+
+
+<style id="user-css-output" type="text/css"></style>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="RkyYH/d7CPTz43VBdlAneD109crfA786RK6NXjKLOwvWsOS9+B5qT7cl5r3v6quWnb18JC6/dyprTumvZRk/sA==" />
+    <script type="text/javascript">
+  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39670045-1', 'auto');
+    ga('send', 'pageview');
+
+  }
+</script>
+    	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Slides">
+	<meta name="twitter:title" content="HTML - The Basics">
+	<meta name="twitter:description" content="Class 01 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord">
+	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/a4053c4404f40a6b487563524ff9a6ef/thumb.jpg?1597083981">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  </head>
+  <body>
+    
+    <div id="container" class="container">
+      
+
+<header class="global-header show-on-scroll">
+  <div class="wrapper">
+    <div class="slides-logo logo-animation">
+      <a class="symbol" href="/">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3"></div>
+      </a>
+      <a class="word" href="/"></a>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav">
+          <li class="nav-item " data-page-id="home/explore">
+            <a class="nav-item-anchor" href="/explore"><span class="nav-item-label wide">Made with Slides</span></a>
+          </li>
+          <li class="nav-item " data-page-id="static/pricing">
+            <a class="nav-item-anchor" href="/pricing?h=1"><span class="nav-item-label">Pricing</span></a>
+          </li>
+          <li class="nav-item " data-page-id="home/features">
+            <a class="nav-item-anchor" href="/features"><span class="nav-item-label">Features</span></a>
+          </li>
+          <li class="nav-item " data-page-id="funnels/teams">
+            <a class="nav-item-anchor" href="/for-teams"><span class="nav-item-label wide">Teams</span></a>
+          </li>
+          <li class="nav-item-divider"></li>
+          <li class="nav-item" data-page-id="sessions/new">
+            <a class="nav-item-anchor" href="/users/sign_in"><span class="nav-item-label">Log in</span></a>
+          </li>
+          <li class="nav-item nav-item-highlighted">
+            <a class="nav-item-anchor" href="/pricing"><span class="nav-item-label">Sign up</span></a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+      
+      <div id="main" class="main " role="main">
+        
+
+
+
+
+
+
+
+<div class="marquee">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-montserrat theme-color-grey-blue">
+			<div class="reveal">
+				<div class="slides">
+					<section data-id="ebb8bc81c6f16bd52f78b16911539deb" data-background-color="#444444"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 294px; height: auto;" data-block-id="517ac3abf5d358384a7185c5e092cdc1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1><span style="color:#FFFFFF">HTML - The Basics</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-42b377" data-block-id="c7bf828ecf28625d417aad4d84f71fb9" style="height: auto; width: 600px; left: 180px; top: 448.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2><span style="color:#FFFFFF"><span style="font-size:1.0em">Leon Noel</span></span></h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-82da71" data-block-id="6766c11f19dcf8ffe8c58eb48e8d5ede" style="height: auto; width: 600px; left: 180px; top: 522.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="color:#FFFFFF">Pokemon Master.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-39a51d" data-block-id="ab3ad3bf2d1ccd44b5dbe4ccbc87194d" style="width: 229.276px; height: 237px; left: 365.362px; top: 21.5px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1306" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png"></div></div></section><section data-id="0c6c359700b0e0549a6b40453eb8c025"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 63.5px; height: auto;" data-block-id="975808de92c2e2b47badba80e6fce647"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Agenda</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 165px; height: auto;" data-block-id="692d87655cbd4e4713eb9312f70b53b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>
+	<h3>Software engineering as a career?</h3>
+	</li>
+	<li>
+	<h3>Learn - Client Server Model</h3>
+	</li>
+	<li>
+	<h3>Code - Learn with Leon About Page</h3>
+	</li>
+	<li>
+	<h3>Learn - What is HTML?</h3>
+	</li>
+	<li>
+	<h3>Learn - Structure</h3>
+	</li>
+	<li>
+	<h3>Learn - Syntax</h3>
+	</li>
+	<li>
+	<h3>Code - Lab Time </h3>
+	</li>
+</ul>
+</div></div></section><section data-id="4dee3ed4d69b3168c8c85dae662cc559"><div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 9px; height: auto;" data-block-id="c64715e2ffb9d41f10cfd2150e16b8bd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10;">
+<h2>Career? </h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 413px; left: 29px; top: 83px; height: auto;" data-block-id="7d42bfc384c3bbc46cc21f699e759caf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 12; text-align: left;">
+<p>Learning to code is the current gold rush.</p>
+
+<p>High Pay:</p>
+
+<p> </p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 451px; height: 300.817px; left: 480px; top: 295.669px; min-width: 1px; min-height: 1px;" data-block-id="86f398dfdf1107dbc83ae2a503c59997"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1000" data-natural-height="667" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626245/ticketmaster-slide.jpg"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-a7938e" data-block-id="443793f34e9bec2539816d75e21e28f0" style="width: 417.751px; height: 185.954px; left: 29px; top: 209.023px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="647" data-natural-height="288" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626252/Screen_Shot_2020-08-10_at_11.36.36_AM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-c73fe1" data-block-id="190d25dda2b27e7850e263f8b7ca1e0c" style="height: auto; width: 600px; left: -158px; top: 400.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Happiest Career:</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-abc74f" data-block-id="d881f7ce1482ba215450825918784e34" style="width: 424.945px; height: 211.193px; left: 23.0275px; top: 446.078px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="664" data-natural-height="330" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626259/Screen_Shot_2020-08-10_at_11.38.54_AM.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-0ef39a" data-block-id="ec9cae20a61d9b4fb2bd9bb151fd0bca" style="height: auto; width: 600px; left: 420px; top: 107.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<h3>No degree</h3>
+
+<h3>Can learn for free</h3>
+
+<h3>Maybe slide in office?</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-63684a" data-block-id="56540354094de89fcde919c3231987b5" style="height: auto; width: 600px; left: 420px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p><span style="font-size:0.5em">Ticketmaster Office</span></p>
+</div></div></section><section data-id="0ba2bb5c6f2939cc1380be1fda980062"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 42px; height: auto;" data-block-id="14bb8256ccee3ea45f8a5b39f46b9e40"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Don't let your dreams be dreams</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 710px; height: 399.008px; left: 125px; top: 192.496px; min-width: 1px; min-height: 1px;" data-block-id="633cd016405050e987f41f7d417108ef"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="605" data-natural-height="340" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626304/just-do-it.gif"></div></div></section><section data-id="f4c188d06405908326ee38c8f69e8c3b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="7332bdedf7ada250583be25bdcf14482"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>What is the internet?</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 710px; height: 426px; left: 125px; top: 179px; min-width: 1px; min-height: 1px;" data-block-id="832bc43f12577b0dadcf9dc13cce4bf8"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1200" data-natural-height="720" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626681/1200px-Client-server-model.svg.png"></div></div></section><section data-id="aa046c32b9e1aede6716b1adf58f018f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 133px; height: auto;" data-block-id="cf7d86280805604fa6d64cc32e8f8bfe"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>HTML5?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 230px; height: auto;" data-block-id="6157d5de461f4c5c8b87c38daaa76bde"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h3>W3C a brief history!</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-30e1b3" data-block-id="3b7b65baa28497936e07fe0504ea4a70" style="width: 373px; height: 280px; left: 293.5px; top: 318px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="373" data-natural-height="280" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626689/berners-lee.jpg"></div></div></section><section data-id="0676368cfa0e8660143a8375f82bd1ac"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 31px; height: auto;" data-block-id="14cd9f5a970717a32a1051f5e7eab2c1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>HTML5</h2>
+
+<h2>Introduced New Features</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-421ba7" data-block-id="6721d38fd5275ed95f8c02e931722d38" style="width: 184px; height: 184px; left: 388px; top: 210px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="225" data-natural-height="225" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7627037/html5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-8c8d07" data-block-id="166367baa5cacb7be93c6482ac0a9545" style="height: auto; width: 600px; left: 200px; top: 402px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<h3>Video</h3>
+	</li>
+	<li>
+	<h3>Audio</h3>
+	</li>
+	<li>
+	<h3>Canvas</h3>
+	</li>
+	<li>
+	<h3>Geolocation</h3>
+	</li>
+	<li>
+	<h3>Websockets</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="3b9751f36072296d2e1d51873b435659"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="60698f0e2b20aa689f94a88985b0a7cc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>The Golden Rule</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 872px; left: 44px; top: 167px; height: auto;" data-block-id="3e9c9bb2b6e81f44bb977560cad56669"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>SEPERATION OF CONCERNS</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-80f7b6" data-block-id="60625f4fdd540ab15e456bb8c4b1a79e" style="height: auto; width: 600px; left: 180px; top: 330.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<h3>HTML = Content / Structure</h3>
+	</li>
+	<li>
+	<h3>CSS = Style</h3>
+	</li>
+	<li>
+	<h3>JS = Behavior / Interaction</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="f5b599e3d65e35f338adf691ff98300a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 111px; height: auto;" data-block-id="32811f82ba196efc55496d7678429f3a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3><span style="font-size:1.0em">HTML SYNTAX </span></h3>
+
+<h3><span style="font-size:1.0em">(Spelling And Grammer Rules)</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 709.939px; height: 169px; left: 125.03px; top: 265.5px; min-width: 1px; min-height: 1px;" data-block-id="dd8132c24a3817df451b679908e6ac84"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="609" data-natural-height="181" style="left: 0px; top: -42px; width: 710px; height: 211px;" data-crop-x="0" data-crop-y="0.199052" data-crop-width="1" data-crop-height="0.800948" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7627062/html-element.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f78c2d" data-block-id="ef3e128b1b3f7c35401217f7434918bc" style="height: auto; width: 600px; left: 491.969px; top: 417px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:0.5em">source: mdn</span></p>
+</div></div></section><section data-id="2c50843212dffd6861de168a5cd0e517"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80.0005px; top: 17px; height: auto;" data-block-id="8aeb7d957c3417c51fb4b1b99b1ae4ed"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>LET'S CODE</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-6cc6cc" data-block-id="226b61a25aa87ce2cfa173dcd2cdcb09" style="width: 501.117px; height: 518px; left: 232.442px; top: 94px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1306" data-natural-height="1350" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-617a8c" data-block-id="5ac61ab49a79bbfeec1710bed34494e9" style="height: auto; width: 600px; left: 180px; top: 616px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>About Page</h2>
+</div></div></section><section data-id="12e6264d75e5a6aba901467e32ba775e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="bb1741b5ea46ad0e577a34f327f86657"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Time For Some</h1>
+
+<h1>TAGS</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-2d2f25" data-block-id="c2a76b494951b661006e06baa5aa4aec" style="height: auto; width: 600px; left: 388px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:0.5em">not that kind...</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-52cac9" data-block-id="94cdf3c332ae66ca347120023f9893c8" style="width: 514.844px; height: 289.6px; left: 222.578px; top: 280px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="384" data-natural-height="216" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7627083/tag.gif"></div></div></section><section data-id="a21811a9ab091882e6a6574317f393b5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="a22b8076c9b5bb27d76d76a46651355e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Heading Elements (tags)</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-151ca3" data-block-id="e6c1b0db0d7d435c9aa01319dbf06507" style="width: 502px; height: 247px; left: 229px; top: 173px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 32px; line-height: 38px;" class="xml"><code>&lt;h1&gt; MOST IMPORTANT &lt;/h1&gt;
+&lt;h2&gt; .............. &lt;/h2&gt;
+&lt;h3&gt; .............. &lt;/h3&gt;
+&lt;h4&gt; .............. &lt;/h4&gt;
+&lt;h5&gt; .............. &lt;/h5&gt;
+&lt;h6&gt; .............. &lt;/h6&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7c6c6e" data-block-id="81200e79f6cfb5948133e7c2ceed9a57" style="height: auto; width: 600px; left: 180px; top: 463px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>SIZE DOES NOT MATTER</h1>
+</div></div></section><section data-id="2d11fdbd31f58fe096ee09520ee33e27"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="7bad7e9d8a49d215f0cd44f3dfa438c4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Other Text Elements</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-d097fd" data-block-id="4591adb2e3b5d17f1da8aea67e098e34" style="width: 648px; height: 151.5px; left: 156px; top: 198.5px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(0deg);"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;p&gt; Paragraph &lt;/p&gt;
+&lt;span&gt; Short text &lt;/span&gt;
+&lt;pre&gt; Preserves Whitespace &lt;/pre&gt;</code></pre></div></div></div></section><section data-id="954ed88cbb2cfc3d5f9b9dfa7cc870e3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 91.5px; height: auto;" data-block-id="3cfba9bd8115d2ce2198c9bcfa880d20"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Nerd Fights</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-01ddf1" data-block-id="6400085d360fdc14d22de14dcc70ee05" style="width: 114px; height: 107px; left: 423px; top: 243px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 42px; line-height: 50px;"><code>&lt;br&gt;
+&lt;hr&gt;</code></pre></div></div></section><section data-id="dd07779e11dbf0af20532e38d881db0c"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 70px; height: auto;" data-block-id="acb29f8c7c07a648b2e1778d2e413426"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2><span style="font-size:1.0em">Assisted Device</span></h2>
+
+<h2><span style="font-size:1.0em">Elements</span></h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-0af9bc" data-block-id="3fbf4c6c1df97129ed408de7c1ee0f33" style="width: 701px; height: 108px; left: 132.5px; top: 280px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;em&gt; Stress Emphasis &lt;/em&gt;
+&lt;strong&gt; Strong Importance &lt;/strong&gt;</code></pre></div></div></section><section data-id="aa0a584ddcff2e77fe87b603d3bb9947"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 62px; height: auto;" data-block-id="02d959a9e961bf9a382a0fc69d36c69e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Ordered List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-33b8fe" data-block-id="e53dbbe89c843ebc9029b0d6b7339b80" style="width: 410px; height: 178px; left: 275px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;ol&gt;
+  &lt;li&gt; Item 1 &lt;/li&gt;
+  &lt;li&gt; Item 2 &lt;/li&gt;
+&lt;/ol&gt;</code></pre></div></div></section><section data-id="e3ca348decdec198c00474523f366d95"><div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 64px; height: auto;" data-block-id="ddb86a1341e17b35658c4128656c5ee2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Unordered List</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-a48521" data-block-id="0cb03c19f3cd057a442328647433b455" style="width: 391px; height: 166px; left: 284.5px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;ul&gt;
+  &lt;li&gt; Item 1 &lt;/li&gt;
+  &lt;li&gt; Item 2 &lt;/li&gt;
+&lt;/ul&gt;</code></pre></div></div></section><section data-id="0161170a4991da6c5fc5a7b9d9e233b8"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 43px; height: auto;" data-block-id="4d15d09da0d2b9b7f8fedc06163ddc6e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Containing Elements</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-0c39c8" data-block-id="aeb73c2ce431fc84dd9bf8c34a941cbc" style="width: 410px; height: 241px; left: 278px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;div&gt; &lt;/div&gt;
+&lt;section&gt; &lt;/section&gt;
+&lt;article&gt; &lt;/article&gt;
+&lt;aside&gt; &lt;/aside&gt;
+&lt;header&gt; &lt;/header&gt;
+&lt;footer&gt; &lt;/footer&gt;</code></pre></div></div></section><section data-id="7f2e2fadc2af65bcadb47e25b7dd2a57"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21.5px; height: auto;" data-block-id="23678fd5bd9dc01f8a83208949a96fba"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Let's Look At Some</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-13112a" data-block-id="dc63f61bb98b56873880d347432932fa" style="width: 413.083px; height: 427px; left: 273.458px; top: 140px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1306" data-natural-height="1350" style="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-c2309b" data-block-id="bc9254d5e5304aa3221b809bf955b326" style="height: auto; width: 600px; left: 183px; top: 581.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>Websites</h1>
+</div></div></section><section data-id="56c9191e0c8ed35c280639d3731aba44"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 80px; height: auto;" data-block-id="be6e2e5220d000df4b10e5e9e8be8f96"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Deprecated Elements</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-65babc" data-block-id="1dca6b7d2364807fbf1d4855cbd6337f" style="width: 410px; height: 246px; left: 275px; top: 202px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;blink&gt;
+&lt;marquee&gt;
+  
+Kinda...
+&lt;b&gt; Bold Text &lt;/b&gt;
+&lt;i&gt; Italic Text &lt;/i&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-1edb7a" data-block-id="ead35d808f07049580ca3d6b1bb895b5" style="height: auto; width: 600px; left: 20px; top: 540.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Basically, </p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-116c24" data-block-id="7ac189a93a2380eafa9406206fe971ee" style="width: 278.756px; height: 156.8px; left: 420.622px; top: 473.2px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="512" data-natural-height="288" style="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7627163/myspace.jpg"></div></div></section><section data-id="48475f18d6137d87d79b3f75eb118338"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 43px; height: auto;" data-block-id="11e8f4a98bff6cb9166118a7a28dfcec"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>HTML Structure</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-2e31bb" data-block-id="1b2847a05bf66ca685b6123444304565" style="width: 728px; height: 398px; left: 116px; top: 175px;"><div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="none" style="z-index: 11;"><pre class="xml" style="font-size: 32px; line-height: 38px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- Stuff the browser needs --&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Everything the user sees --&gt;
+    &lt;h1&gt;Hello, Twitch!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div></section><section data-id="49fc8f76b239cb1017f23fb0d3418647"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21.5px; height: auto;" data-block-id="e249abb7a47a979c3758ac8b2f581402"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Let's Code</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-bef835" data-block-id="4a9e5e91e92d26588964c9a9688ec8d4" style="height: auto; width: 600px; left: 180px; top: 581.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h1>Lab Time</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-1fb480" data-block-id="6800e9983eb59e144b4869ca64149481" style="width: 435.333px; height: 450px; left: 262.333px; top: 131.5px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1306" data-natural-height="1350" style="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/549074/images/7626184/Learn_with_Leon_v2__bonus_.png"></div></div></section>
+				</div>
+				<div class="deck-kudos">
+					<button class="kudos-button kudos-trigger" data-kudos-id="1900447" data-kudoed-by-user="false">
+						<div class="kudos-heart">
+							<span class="kudos-icon icon i-heart-fill"></span>
+						</div>
+						<div class="kudos-count" data-kudos-value="5" data-kudos-id="1900447"></div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pill summary-pill">
+		<div class="pill-picture" style="background-image: url(https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+		<div class="pill-content">
+			<h4 class="pill-title">HTML - The Basics</h4>
+			<p class="pill-description">By Leon Noel</p>
+		</div>
+	</div>
+
+	<div class="pill instructions-pill">
+		<div class="pill-picture"></div>
+		<div class="pill-content">
+			<h4 class="pill-title"></h4>
+			<p class="pill-description"></p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="column">
+	<header class="deck-card ">
+		<div class="deck-card-header">
+				<div class="deck-social">
+					<a href="#" class="deck-social-button facebook-share-button" data-tooltip="Share on Facebook">
+					</a>
+					<a href="#" class="deck-social-button twitter-share-button" data-tooltip="Share on Twitter">
+						<span class="icon i-twitter"></span>
+					</a>
+				</div>
+
+			<div class="deck-options">
+				<a class="button white fullscreen-button" data-tooltip="Fullscreen" href="/leonnoel/html-the-basics/fullscreen"><span class="icon i-fullscreen"></span></a>
+				<button class="button white share-button" data-tooltip="Share"><span class="icon i-share"></span></button>
+			</div>
+
+		</div>
+
+
+		<div class="clear"></div>
+
+		<div class="deck-card-body">
+			<div class="deck-info">
+				<h1 class="title">HTML - The Basics</h1>
+				<p class="description">Class 01 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord</p>
+				<ul class="deck-meta">
+					<li data-tooltip="Published date" data-tooltip-delay="500">
+						<span class="icon i-clock"></span>
+						<time class="value ago" datetime="2020-08-10 18:15:15 UTC"></time>
+					</li>
+					<li data-tooltip="Kudos" data-tooltip-delay="500">
+						<span class="icon i-heart-fill"></span>
+						<span class="value" data-kudos-value="6" data-kudos-id="1900447"></span>
+					</li>
+					<li data-tooltip="Views" data-tooltip-delay="500">
+						<span class="icon i-eye"></span>
+						<span class="value">507</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="user-info">
+	<div class="picture" style="background-image: url(https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></div>
+	<div class="text">
+		<h3 class="title">
+			<a href="/leonnoel" class="username">Leon Noel</a>
+		</h3>
+		<p class="description"></p>
+		<ul class="links">
+			 <li><a target="_blank" href="https://leonnoel.com"><span class="icon i-link"></span>leonnoel.com</a></li> 
+			 <li><a href="https://twitter.com/leonnoel" target="_blank"><span class="icon i-twitter"></span>leonnoel</a></li> 
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+			<div class="clear"></div>
+		</div>
+	</header>
+
+
+	<section class="deck-list">
+		<h2>More from <a href="/leonnoel">Leon Noel</a></h2>
+		<ul class="carousel">
+			<li class="deck-thumbnail">
+  <a class="deck-link" href="/leonnoel/javascript-arrays"></a>
+  <img class="deck-image" src="https://s3.amazonaws.com/media-p.slid.es/thumbnails/2c1d67e39ff3d31a6d3859f4a3d024ef/thumb.jpg?1600983442" loading="lazy" />
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Javascript Arrays</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="/leonnoel">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Leon Noel</span>
+      </a>
+      <div class="stats">
+        <div>79<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="/leonnoel/javascript-review"></a>
+  <img class="deck-image" src="https://s3.amazonaws.com/media-p.slid.es/thumbnails/7104a4e4952d8d0f9b230f2dac448272/thumb.jpg?1600796311" loading="lazy" />
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Javascript Review</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="/leonnoel">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Leon Noel</span>
+      </a>
+      <div class="stats">
+        <div>113<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="/leonnoel/css-animation"></a>
+  <img class="deck-image" src="https://s3.amazonaws.com/media-p.slid.es/thumbnails/d1c9f1241333bc3f096ea582c59805cf/thumb.jpg?1600375206" loading="lazy" />
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">CSS - Animations!</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="/leonnoel">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Leon Noel</span>
+      </a>
+      <div class="stats">
+        <div>225<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+<li class="deck-thumbnail">
+  <a class="deck-link" href="/leonnoel/javascript-end"></a>
+  <img class="deck-image" src="https://s3.amazonaws.com/media-p.slid.es/thumbnails/ef2a6357809a131114b2e713e09df961/thumb.jpg?1599766463" loading="lazy" />
+  <footer class="deck-details">
+    <div class="top">
+      <div class="title">Javascript The End Or Is It?</div>
+    </div>
+    <div class="bottom">
+      <a class="author" href="/leonnoel">
+        <span class="picture" style="background-image: url(https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140&amp;d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png)"></span>
+        <span class="name">Leon Noel</span>
+      </a>
+      <div class="stats">
+        <div>81<span class="icon i-eye"></span></div>
+      </div>
+    </div>
+  </footer>
+</li>
+
+		</ul>
+	</section>
+
+</div>
+      </div>
+      <footer class="global-footer">
+    <div class="link-group">
+      <h5>Tour</h5>
+      <a href="https://slides.com/?root=true">Home</a>
+      <a href="https://slides.com/features?root=true">Features</a>
+      <a href="https://slides.com/pricing?root=true">Pricing</a>
+      <a href="https://slides.com/explore?root=true">Made with Slides</a>
+      <a href="https://slides.com/for-teams?root=true">Slides for Teams</a>
+      <a href="https://slides.com/for-developers?root=true">Slides for Developers</a>
+    </div>
+
+    <div class="link-group">
+      <h5>Help</h5>
+      <a href="http://help.slides.com" target="_blank">Forum</a>
+      <a href="http://help.slides.com/knowledgebase" target="_blank">Knowledge Base</a>
+      <a href="https://slides.com/developers?root=true">Developers Docs</a>
+      <a href="http://help.slides.com" data-feedback-mode="smartvote">Leave Feedback</a>
+      <a href="http://help.slides.com" data-feedback-mode="contact">Report an Issue</a>
+    </div>
+
+    <div class="link-group">
+      <h5>Updates</h5>
+      <a href="https://slides.com/changelog?root=true">Changelog</a>
+      <a href="https://slides.com/news">News</a>
+      <a href="https://twitter.com/slides" target="_blank">Twitter</a>
+      <a href="https://facebook.com/slidesapp" target="_blank">Facebook</a>
+    </div>
+
+    <div class="link-group">
+      <h5>Company</h5>
+      <a href="https://slides.com/about?root=true">About Slides</a>
+      <a href="https://slides.com/security?root=true">Security</a>
+      <a href="https://slides.com/partners?root=true">Partners</a>
+    </div>
+
+    <div class="legal">
+      <a href="https://slides.com/terms?root=true">Terms</a>
+      &bull; <a href="https://slides.com/privacy?root=true">Privacy</a>
+      &bull; <span class="copyright">&copy; 2020 Slides, Inc.</span>
+    </div>
+</footer>
+
+    </div> <!--! end of #container -->
+    
+<script>
+	var SLConfig = {"deck":{"id":1900447,"slug":"html-the-basics","title":"HTML - The Basics","description":"Class 01 of our Free Web Dev Bootcamp for folx affected by the pandemic. Join live T/Th 6:30pm ET leonnoel.com/twitch and ask questions here:  leonnoel.com/discord","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2020-08-10T18:15:15.390Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/a4053c4404f40a6b487563524ff9a6ef/thumb.jpg?1597083981","view_count":507,"user":{"id":549074,"username":"leonnoel","name":"Leon Noel","description":"","thumbnail_url":"https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"lite","team_id":null,"settings":{"id":393085,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"grey-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":22,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1598368397343,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true},"user":{"id":549074,"username":"leonnoel","name":"Leon Noel","description":"","thumbnail_url":"https://www.gravatar.com/avatar/8a8f09b301ec7bf98163dbf4c3a7e478?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"lite","team_id":null,"settings":{"id":393085,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
+</script>
+    <script src="//assets.slid.es/assets/application-06f73b4184927043d738bfa56cbd5513286d34ae33c2d63c685ca577a8f7bbc4.js" defer="defer"></script>
+    	<script src="//assets.slid.es/assets/deck-64ae628b82524293d5ddd125f34d5be25e5c6549517c3698a8da02fe24e10534.js" defer="defer"></script>
+	
+
+
+    <script>
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/f7sH7NavrjjvuGxByaw.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+UserVoice.push(['set', {
+  accent_color: '#448dd6',
+  trigger_color: 'white',
+  trigger_background_color: 'rgba(46, 49, 51, 0.6)',
+  position: 'automatic'
+}]);
+
+</script>
+
+  </body>
+</html>
