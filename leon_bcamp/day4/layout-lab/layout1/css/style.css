@@ -96,16 +96,13 @@ header, footer{
   height: 100px;
   clear: both;
 }
-main > section{
+section{
   border: 1px solid black;
   height: 200px;
   float: left;
   width: 33.3333%;
 }
 
-section{
-  border: 1px solid black;
-  height: 300px;
-  float: left;
+.bottom{
   width: 50%;
 }
