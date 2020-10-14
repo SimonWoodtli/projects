@@ -1,0 +1,22 @@
+h1{
+  padding: 20px 0 20px 20px;
+  margin: 0 0 0 100px;
+  background: rgba(222,146,241,1);
+  color: rgba(141,199,23,1);
+}
+h2{
+  padding: 100px 0;
+  border-top: 5px solid darkgreen;
+  border-bottom: 5px solid darkgreen;
+  background: orange;
+}
+section{
+  border: 20px solid blue;
+  height: 300px;
+  margin-top: 500px;
+}
+span{
+  border: 2px solid yellow;
+  padding: 5px;
+  margin: 5px;
+}
