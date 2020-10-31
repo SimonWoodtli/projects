@@ -2,5 +2,5 @@
 
 ## Homework (Due Thursday - Nov. 5th):
 
-* Read: https://learn.shayhowe.com/html-css/
-* Build: HTML for BBC Website (just what is in the attached image)
+1. Read: https://learn.shayhowe.com/html-css/ (todo: cha 9-12)
+2. Build: HTML for BBC Website [finished]
