@@ -1,6 +1,6 @@
 # Homework (Due Thursday - Nov. 12th):
 
-- [] Do: Finish Simple Site Lab from class-03
+- [x] Do: Finish Simple Site Lab from class-03
 - [] Read: http://learnlayout.com/
 - [] Do: https://www.typingtest.com/ (Five Minute Test)
 - [] Do: Practice Typing - https://www.keybr.com/
