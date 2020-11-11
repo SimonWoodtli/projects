@@ -1,0 +1,19 @@
+#!/home/sero/.node/bin/node
+
+let aurora = {
+  name: "Aurora",
+  health: 150,
+  strength: 25,
+  xp: 0,
+  describe() {
+    return `${this.name} has ${this.health} health points and ${this.strength} as strength and ${this.xp} xp points`
+  },
+  fight() {
+    aurora.health -= 20,
+    aurora.strength += 10,
+    aurora.xp += 15
+  }
+}
+
+aurora.fight()
+console.log(aurora.describe())

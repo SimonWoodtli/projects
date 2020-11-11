@@ -1,0 +1,11 @@
+#!/home/sero/.node/bin/node
+// page 74
+function minNumber(x, y) {
+  if (x < y) {
+    return x;
+  } else {
+    return y;
+  }
+}
+console.log(minNumber(10,14))
+

@@ -1,0 +1,15 @@
+#!/home/sero/.node/bin/node
+// page 74
+function calculator(n1, operator, n2) {
+  if (operator === "+") {
+    return n1 + n2
+  } else if (operator === "-") {
+    return n1 - n2
+  } else if (operator === "*") {
+    return n1 * n2
+  } else if (operator === "/") {
+    return n1 / n2
+  }
+}
+console.log(calculator(10, "*", 14))
+

@@ -1,0 +1,22 @@
+#!/home/sero/.node/bin/node
+
+let fang = {
+  name: "Fang",
+  species: "boarhound",
+  size: '75"',
+  describe() {
+    return  `${this.name} is a ${this.species} dog measuring ${this.size}`
+  },
+  cat() {
+    return `Look a cat! ${this.name} barks: ${this.bark()}`
+  },
+  bark() {
+    return "Grrr! Grrr!"
+  }
+}
+
+console.log(fang.describe())
+console.log(fang.cat())
+
+
+

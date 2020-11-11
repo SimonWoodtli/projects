@@ -1,0 +1,18 @@
+#!/home/sero/.node/bin/node
+
+let account = {
+  name: "Alex",
+  balance: 0,
+  credit(amount) {
+    account.balance = amount
+  },
+  describe() {
+    return `owner: ${this.name}, balance ${this.balance}`
+  }
+}
+
+console.log(account.describe())
+console.log(account.credit(-30))
+console.log(account.describe())
+
+

@@ -1,0 +1,5 @@
+#!/home/sero/.node/bin/node
+// page 73
+const square = x => x*x
+
+console.log(square(5))

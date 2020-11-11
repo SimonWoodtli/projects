@@ -1,0 +1,12 @@
+#!/home/sero/.node/bin/node
+// page 74
+
+let r = Number(prompt("Tell me a radius"))
+
+function calculateArea(r) {
+  console.log(Math.PI*r*r)
+}
+
+function calculateCircumference(r) {
+  console.log(2*Math.PI*r)
+}
