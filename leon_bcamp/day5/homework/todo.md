@@ -1,6 +1,6 @@
 # Homework (Due Thursday - Nov. 19th):
 
-- [] Do: Make 15 minutes of pain responsive
-- [] Read: http://learnlayout.com/
-- [] Read: https://learn.shayhowe.com/advanced-html-css/
-- [] Do: Practice Typing - https://www.keybr.com/
+- [x] Do: Make 15 minutes of pain responsive (make it stack sections on mobile)
+- [x] Read: http://learnlayout.com/
+- [x] Read: https://learn.shayhowe.com/advanced-html-css/
+- [x] Do: Practice Typing - https://www.keybr.com/
