@@ -56,12 +56,27 @@ section {
   width: 50%;
 }
 
+
+@media screen and (max-width: 800px) {
+  section, .bottom {
+    background: purple;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section, .bottom {
+    background: teal;
+  }
+
 @media screen and (max-width: 600px) {
   section, .bottom {
     width: 100%;
     background: green;
+    float: none
   }
 }
+
+
 
 /******************************************
 /* ADDITIONAL STYLES

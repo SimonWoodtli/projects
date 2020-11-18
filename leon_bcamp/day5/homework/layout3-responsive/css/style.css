@@ -55,10 +55,23 @@ section {
   width: 40%;
 }
 
+@media screen and (max-width: 800px) {
+  section, .main {
+    background: teal;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section, .main {
+    background: orange;
+  }
+}
+
 @media screen and (max-width: 600px) {
   section, .main {
     width: 100%;
     background: red;
+    float: none;
   }
 }
 
