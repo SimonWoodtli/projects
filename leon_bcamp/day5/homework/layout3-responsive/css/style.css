@@ -55,25 +55,41 @@ section {
   width: 40%;
 }
 
-@media screen and (max-width: 800px) {
-  section, .main {
-    background: teal;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  section, .main {
-    background: orange;
-  }
-}
 
 @media screen and (max-width: 600px) {
   section, .main {
     width: 100%;
     background: red;
-    float: none;
   }
 }
+
+@media (min-width: 601px) and (max-width: 700px) {
+  section {
+    background: orange;
+  }
+
+  .main + section + section {
+    display: none;
+  }
+
+  .main + section {
+    width: 40%;
+  }
+}
+@media (min-width: 701px) and (max-width: 800px) {
+  section {
+    background: teal;
+  }
+
+  .main + section + section {
+    display: none;
+  }
+
+  .main + section {
+    width: 40%;
+  }
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES

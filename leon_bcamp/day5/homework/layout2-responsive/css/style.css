@@ -60,25 +60,34 @@ section {
   width: 60%;
   float: left;
 }
-@media screen and (max-width: 800px) {
-  section, .sidebar, .aside {
-    background: blue;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  section, .sidebar, .aside {
-    background: purple;
-  }
-}
 
 @media screen and (max-width: 600px) {
   section, .sidebar, .aside {
     width: 100%;
     background: teal;
-    float: none;
   }
 }
+
+@media (min-width: 601px) and (max-width: 700px) {
+  section {
+    background: purple;
+  }
+
+  .aside {
+    width: 50%;
+  }
+
+  .sidebar {
+    width: 50%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+  section {
+    background: blue;
+  }
+}
+
 
 
 
