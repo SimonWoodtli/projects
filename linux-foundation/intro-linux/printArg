@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ $1 ];
+then
+  echo "hey there $1 are awesome!"
+else
+  echo "you are great"
+fi

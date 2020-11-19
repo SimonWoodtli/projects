@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Tell me a dirname"
+read dirname
+mkdir $dirname
+cd $dirname
+pwd
+touch foo{1..3}
+ls -l foo{1..3}
+echo "You are awesome" > foo1
+echo "You rock!" > foo2
+echo "Hell yea!" > foo3
+cat foo{1..3}
+echo "astalo"
+cd .. && rm -r $dirname

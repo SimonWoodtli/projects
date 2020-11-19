@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "give me a number"
+read number
+if [ $number -eq 0 ] || [ $number -eq 1 ]; then
+  echo "hey you gave me $number"
+  if [ $number -eq 0 ]; then
+    export answer="No"
+  else
+    export answer="Yes"
+  fi
+else
+  echo "please give me a 0 or 1"
+fi
+echo $answer

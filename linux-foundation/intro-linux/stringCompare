@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Write a script which reads two strings and then:
+#
+# 1. Tests to see if the first string is of zero length, and if the other is of non-zero length, telling the user of both results.
+# 2. Determines the length of each string, and reports on which one is longer or if they are of equal length.
+# 3. Compares the strings to see if they are the same, and reports on the result.
+
+echo "please enter two strings to compare their length"
+read str1; read str2
+
+if [[ ${#str1} -eq 0 ]]; then
+  echo "str1 has 0 length"
+elif [[ ${#str2} -eq 0 ]]; then
+  echo "str2 has 0 length"
+fi
+
+if [[ ${#str1} == ${#str2} ]]; then
+  echo "string1: $str1 and string2: $str2 have the same length"
+elif [[ ${#str1} -gt ${#str2} ]]; then
+  echo "string1: $str1 has more characters than string2: $str2"
+elif [[ ${#str1} -lt ${#str2} ]]; then
+  echo "string1: $str1 has less characters than string2: $str2"
+fi
+
+
+

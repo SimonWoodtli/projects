@@ -1,0 +1,35 @@
+#!/bin/bash
+arg1=$2
+arg2=$3
+op=$1
+add() {
+  result=$(($arg1+$arg2))
+}
+
+sub() {
+  result=$(($arg1+$arg2))
+}
+
+mul() {
+  result=$(($arg1*$arg2))
+}
+
+div() {
+  result=$(($arg1/$arg2))
+}
+
+if [[ $op == a ]]; then
+  add
+  echo $result
+elif [[ $op == s ]]; then
+  sub
+  echo $result
+elif [[ $op == m ]]; then
+  mul
+  echo $result
+elif [[ $op == d ]]; then
+  div
+  echo $result
+else
+  echo "Calculator Instructions: Please enter arg1 as operators like a,s,m or d. And arg2 and arg3 as digits."
+fi

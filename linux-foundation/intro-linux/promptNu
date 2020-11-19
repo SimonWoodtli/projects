@@ -1,0 +1,20 @@
+#!/bin/bash
+f1() {
+  echo " This message is from function 1"
+}
+f2() {
+  echo " This message is from function 2"
+}
+f3() {
+  echo " This message is from function 3"
+}
+
+# Beginning of the main script
+
+# prompt the user to get their choice
+echo "Enter a number from 1 to 3"
+read n
+
+# Call the chosen function
+f$n
+
