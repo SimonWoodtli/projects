@@ -15,7 +15,7 @@ elif [[ ${#str2} -eq 0 ]]; then
   echo "str2 has 0 length"
 fi
 
-if [[ ${#str1} == ${#str2} ]]; then
+if [[ ${#str1} -eq ${#str2} ]]; then
   echo "string1: $str1 and string2: $str2 have the same length"
 elif [[ ${#str1} -gt ${#str2} ]]; then
   echo "string1: $str1 has more characters than string2: $str2"
