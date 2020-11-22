@@ -1,0 +1,119 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* 1rem = 10px */
+html{
+  font-size: 62.5%;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header nav {
+  height: 10%;
+  border-bottom: 1px solid gray;
+  height: 40px;
+}
+
+header nav *{
+  width: 21%;
+  float: left;
+  margin: 0 2%;
+}
+
+header ul li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+header form input {
+  width: 50%;
+  height: 28px;
+}
+
+header nav > a {
+  margin: 0 2% 0 6%;
+  width: 2%;
+  font-size: 2rem;
+}
+
+header nav > span {
+  width: 25%;
+  margin-left: 12%;
+  font-size: 2.5rem;
+}
+
+main section {
+  width: 50%;
+  float: left;
+  margin-top: 6%;
+}
+
+main h1 span {
+  font-size: 5rem;
+  width: 100%;
+  float: left;
+}
+
+main section p {
+  font-size: 2rem;
+  margin-top: 30%;
+  width: 60%;
+}
+
+main section img {
+  width: 80%;
+  margin-left: 12%;
+}
+
+main ul {
+  padding: 0;
+}
+
+main li {
+  float: left;
+  list-style-type: none;
+  margin-left: 2%;
+  background: blue;
+  border-radius: 1rem;
+  width: 10%;
+  text-align: center;
+  height: 2rem;
+}
+
+main li a {
+  color: white;
+  text-decoration: none;
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
