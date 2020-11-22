@@ -1,0 +1,8 @@
+#!/bin/bash
+# Write a script that takes as an argument a month in numerical form (i.e. between 1 and 12), and translates this to the month name and displays the result on standard out (the terminal).
+
+# If no argument is given, or a bad number is given, the script should report the error and exit.
+
+[[ $# -eq 0 ]] && echo "Please use the script with and argument: $0 arg1" && exit 1
+name=$1-$RANDOM
+echo $name
