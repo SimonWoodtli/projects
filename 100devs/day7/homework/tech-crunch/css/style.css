@@ -1,0 +1,132 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* 1rem = 10px */
+html{
+  font-size: 62.5%;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+p {
+  font-size: 1.5rem;
+  margin: 1% 0;
+
+}
+
+h2 {
+  margin: 1% 0;
+}
+
+h1 {
+  margin: 1% 0;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  width: 10%;
+  float: left;
+}
+header *{
+  width: 100%;
+  float: left;
+  padding-left: 10%;
+  margin: 6% 0;
+}
+
+header li, header ul, header li > a {
+  list-style-type: none;
+  padding: 0;
+  margin: 6% 0;
+}
+
+
+main {
+  width: 50%;
+  float: left;
+  margin-top: 1%;
+}
+main *{
+  width: 100%;
+  float: left;
+  padding: 0 3% 0 10%;
+}
+
+main img {
+}
+
+aside {
+  width: 40%;
+  float: left;
+  margin-top: 1%;
+}
+aside *{
+  width: 100%;
+  float: left;
+  padding: 0 3%;
+}
+
+aside p {
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin: 2% 0;
+}
+
+aside span {
+  border-bottom: 1px solid gray;
+  font-size: 1.5rem;
+}
+
+
+body > section h2 {
+  padding-top: 0%;
+}
+body > section {
+  width: 90%;
+  padding-left: 5%;
+  float: left;
+}
+body > section section{
+  width: 33.33%;
+  float: left;
+  margin: 0;
+  padding: 3% 4%;
+
+}
+
+section > section img {
+}
+.fix {
+  padding: 3% 0;
+}
+
+
+div {
+  border-bottom: 1px solid gray;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

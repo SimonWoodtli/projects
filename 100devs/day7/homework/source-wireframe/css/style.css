@@ -1,0 +1,210 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* 1rem = 10px */
+html{
+  font-size: 62.5%;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background: #F5F9FC;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+
+}
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 3.5rem;
+  white-space: pre-line;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #435C6E;
+}
+
+/******************************************
+/* HEADER
+/*******************************************/
+header {
+  height: 5rem;
+  padding-top: 1rem;
+}
+header span, header div, header ul{
+  width: 33.33%;
+  float: left;
+  margin: 0;
+}
+
+header ul {
+  padding: 0;
+}
+
+header span {
+  padding-left: 3%;
+  font-size: 2rem;
+  color: #2E4759;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  color: white;
+  background: #2D4658;
+}
+
+header div {
+  padding-left: 26%;
+  padding-top: 0.4%;
+}
+
+.first-link {
+  padding: 0;
+}
+
+header li a {
+  width: 25%;
+  float: left;
+  padding-left: 5%;
+  color: #435C6E;
+}
+
+/******************************************
+/* MAIN
+/*******************************************/
+
+main section {
+  padding-top: 0.5%;
+  width: 50%;
+  float: left;
+}
+
+.left  {
+  padding-left: 10%;
+}
+
+
+.left span {
+  color: #435C6E;
+  font-size: 1rem;
+}
+
+.left form {
+  width: 100%;
+  padding-top: 5%;
+  float: left;
+}
+
+.left input {
+  padding: 0.5rem 0;
+  width: 33%;
+  border: none;
+  background: #E0E9F0;
+
+  float: left;
+}
+
+.left .btn {
+  padding: 0.2rem 0;
+  width: 5rem;
+  text-align: center;
+  float: left;
+
+}
+
+.left p {
+  width: 80%;
+  float: left;
+  padding-top: 3%;
+}
+
+.right img {
+  width: 100%;
+  padding-left: 7%;
+}
+
+
+
+/******************************************
+/* Middle Section
+/*******************************************/
+
+
+.middle > section {
+  width: 16.25%;
+  float: left;
+  margin-left: 5%;
+}
+.middle h3 {
+  font-size: 2rem;
+  color: #2D4658;
+}
+
+.middle .m1 {
+  margin-left: 10%;
+}
+
+.middle .m4 {
+  margin-right: 10%;
+}
+
+.middle a {
+  color: #2D4658;
+}
+
+
+/******************************************
+/* FOOTER
+/*******************************************/
+footer {
+  width: 100%;
+  float: left;
+}
+footer h2 {
+  font-size: 4rem;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 0;
+  white-space: pre-line;
+}
+
+footer p {
+  margin-left: 10%;
+}
+
+footer div {
+  background: #E0E9F0;
+  margin: 0 10%;
+  width: 80%;
+  height: 4rem;
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

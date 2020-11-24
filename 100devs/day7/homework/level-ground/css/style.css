@@ -1,0 +1,301 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* 1rem = 10px */
+html{
+  font-size: 62.5%;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background: #66768A;
+  color: black;
+}
+
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  width: 100%;
+  float: left;
+}
+
+
+
+nav a {
+  width: 31.5%;
+  float: left;
+  font-size: 2rem;
+  color: lightgray;
+}
+nav li:first-child {
+  width: 20%;
+}
+
+nav li:last-child {
+  padding-right: 3%;
+}
+
+.btn {
+  background: lightgray;
+  color: #66768A;
+  border-radius: 10%;
+  width: 5%;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  margin-left: 26%;
+}
+
+nav li + li + li {
+  padding-left: 46%;
+}
+
+
+main {
+  width: 100%;
+}
+
+main * {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+main h1 {
+  margin: 4% 0 2% 0;
+  font-size: 7rem;
+  text-transform: uppercase;
+  color: white;
+  padding: 0 8%;
+}
+
+main p {
+  padding: 0 10%;
+  margin: 0;
+  color: white;
+}
+
+main a {
+  font-size: 2rem;
+  color: lightgray;
+  margin-top: 2%;
+}
+
+main span {
+  margin-top: 3%;
+  color: #434857;
+  font-weight: bold;
+}
+
+.why {
+  margin-top: 1.8%;
+  padding: 4% 0;
+  width: 100%;
+  float: left;
+  background: white;
+}
+
+.why * {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+
+.why p {
+  padding: 0 25%;
+}
+
+.because {
+  padding: 5% 0 10% 18%;
+  float: left;
+  width: 100%;
+  background: #DBDFE2;
+}
+
+.because > section {
+  width: 40%;
+  float: left;
+}
+
+.because div {
+  background: #66768A;
+  width: 25rem;
+  height: 15rem;
+}
+
+.because div {
+  margin: 13% auto 5% auto;
+}
+
+
+
+.because h3 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.because p {
+  width: 85%;
+  margin: 7% auto;
+  text-align: center;
+}
+
+.btn-trans {
+  padding: 3% 5%;
+  width: 140%;
+  border: 1px solid black;
+  font-size: 2rem;
+  margin-left: 35%;
+}
+
+.you {
+  width: 100%;
+  float: left;
+  background: white;
+  padding-bottom: 10%;
+}
+
+.you section * {
+  float: left;
+  width: 100%;
+}
+.you section {
+  width: 50%;
+  float: left;
+  margin-left: 25%;
+}
+
+.you h2 {
+  margin-top: 10%;
+}
+
+.you p {
+  text-align: center;
+}
+
+.you .btn-trans {
+  margin: 10% 0 0 37%;
+  width: 25%;
+  text-align: center;
+  padding: 2.3%;
+}
+
+footer {
+  width: 100%;
+  float: left;
+  background: #161F2A;
+  color: white;
+}
+
+.info1 {
+  width: 15%;
+  float: left;
+  padding-left: 2.5%;
+  padding-top: 1%;
+}
+
+.info2 {
+  width: 14%;
+  float: right;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.info3 {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer a {
+  color: white;
+}
+
+address {
+  white-space: pre-line;
+  font-size: 1.3rem;
+}
+
+ .info2 h4 {
+  white-space: pre-line;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 20% 0 0 0;
+  text-transform: uppercase;
+}
+
+.info3 p {
+  border-top: 1px solid white;
+  width: 95%;
+  margin: 0 auto 1.8% auto;
+  padding-top: 0.5%;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.info1 h4 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info1 li {
+  width: 40%;
+  float: left;
+  font-size: 1.3rem;
+}
+.info1 a {
+  margin-left: -63%;
+}
+
+.info1 ul {
+  margin-bottom: 20%;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
