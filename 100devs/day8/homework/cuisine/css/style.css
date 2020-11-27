@@ -29,8 +29,8 @@ html{
 /*******************************************/
 
 body {
-  background: #E4EEF3;
   color: black;
+  float: left;
 }
 
 a {
@@ -61,15 +61,17 @@ li {
   list-style-type: none;
 }
 
+
 /******************************************
 /* LAYOUT
 /*******************************************/
 
 /******************************************
-/* HEADER
+/* header
 /*******************************************/
 header {
   width: 100%;
+  background: linear-gradient(90deg, rgba(219,223,226,1) 0%, rgba(218,221,224,1) 21%, rgba(230,234,237,1) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
   padding: 0 5%;
   float: left;
 }
@@ -108,14 +110,13 @@ header form input {
 }
 
 
-
-
 /******************************************
-/* MAIN
+/* main
 /*******************************************/
 
 main {
   width: 100%;
+  background: linear-gradient(90deg, rgba(219,223,226,1) 0%, rgba(218,221,224,1) 21%, rgba(230,234,237,1) 50%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
   float: left;
 }
 
@@ -170,7 +171,7 @@ main {
 }
 
 /******************************************
-/* ADDITIONAL STYLES
+/* about
 /*******************************************/
 .about {
   width: 100%;
@@ -211,10 +212,11 @@ main {
 }
 
 /******************************************
-/* RECIPES
+/* recipes
 /*******************************************/
 
 .recipes {
+  background: rgba(219,223,226,1);
   width: 100%;
   float: left;
   padding-top: 2%;
@@ -238,7 +240,7 @@ main {
   float: left;
 }
 .recipes a {
-  width: 8%;
+  width: 20%;
   font-size: 1.5rem;
   float: left;
   border-bottom: 0.3rem solid #FFAA58;
@@ -251,18 +253,21 @@ main {
   width: 100%;
 }
 
-.recipes-img img + img {
-  width: 60.7%;
+.recipes > img:nth-child(odd) {
+  width: 100%;
+}
+.recipes-img > img:nth-child(even) {
+  width: 92.5rem;
   margin-bottom: 10rem;
 }
 /******************************************
-/* BOOK
+/* booking
 /*******************************************/
 
 .book {
   width: 100%;
   float: left;
-  background: white;
+  background: linear-gradient(90deg, rgba(221,227,233,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
 }
 
 .book-text h3 {
@@ -299,19 +304,182 @@ main {
   float: left;
   font-size: 2rem;
 }
-.schedule-day {
-}
 .book-text > span:nth-child(odd) {
-  padding-left: 28%;
+  padding-left: 33%;
 }
 
 .book-text > span:nth-child(even) {
-  padding-left: 23%;
+  padding-left: 8%;
 }
 .book-img {
-  margin: 28%;
+  width: 100%;
+  float: left;
+  padding: 0 25%;
 }
+
 /******************************************
-/* ADDITIONAL STYLES
+/* review
 /*******************************************/
+.review {
+  width: 100%;
+  float: left;
+  background: linear-gradient(90deg, rgba(221,227,233,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+}
+
+.review h3 {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 3rem;
+}
+.review h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.review h4 {
+  text-align: center;
+  margin: 0;
+}
+
+.review h4:nth-child(even) {
+  font-size: 3rem;
+}
+
+.review h4:nth-child(odd) {
+  font-weight: none;
+  color: gray;
+}
+
+.review img {
+  padding-left: 46%;
+}
+
+.review p {
+  padding: 0 12%;
+  text-align: center;
+}
+
+/******************************************
+/* media queries
+/*******************************************/
+
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    width: 3rem;
+    float: left;
+    margin-top: 1rem;
+  }
+  .hamburger div {
+    width: 100%;
+    float: left;
+    border-bottom: 0.1rem solid black;
+    margin: 0.4rem 0;
+  }
+
+  header form  {
+    width: 25%;
+    margin-top: 1rem;
+  }
+
+  header form input {
+    width: 100%;
+  }
+  .main-text {
+    width: 100%;
+    float: left;
+    padding: 2%;
+  }
+  .main-text h1 {
+    margin: 2rem 0;
+    line-height: 5rem;
+    font-size: 5rem;
+    padding: 0 3%;
+  }
+  .main-text form {
+    margin-top: 2rem;
+    padding: 0 3%;
+  }
+
+  .main-text section span {
+    width: 20%;
+    float: left;
+    padding: 7% 3%;
+  }
+
+
+  img {
+    display: none !important;
+  }
+  .about {
+    background-image: none;
+    padding: 5%;
+  }
+  .about * {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .about h2 {
+    margin: 4rem 0 2rem 0;
+    padding: 0 3%;
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+  .about a {
+    margin: 5% 0;
+  }
+  .recipes {
+    display: none;
+  }
+  .book {
+    padding: 5%;
+  }
+  .book h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .book h2 {
+    float: left;
+    margin: 4rem 0 2rem 0;
+    padding: 0 3%;
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+  .book-call {
+    width: 100%;
+  }
+
+  .book-call span {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .book-text > span:nth-child(odd) {
+    margin-top: 2rem;
+    margin-left: 10%;
+    width: 20%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .book-text > span:nth-child(even) {
+    margin-top: 2rem;
+    margin-left: 40%;
+    padding: 0;
+    width: 20%;
+    text-align: center;
+  }
+
+}
 
