@@ -1,0 +1,317 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* 1rem = 10px */
+html{
+  font-size: 62.5%;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background: #E4EEF3;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 8rem;
+  white-space: pre-line;
+  margin: 7rem 0 1.5rem 0;
+}
+
+p {
+  font-size: 1.7rem;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #FFAA58;
+}
+
+h2 {
+  font-size: 7.5rem;
+}
+li {
+  list-style-type: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/******************************************
+/* HEADER
+/*******************************************/
+header {
+  width: 100%;
+  padding: 0 5%;
+  float: left;
+}
+
+header > img:first-child, header img:last-child{
+  width:  5%;
+  float: left;
+  height: 3.5rem;
+}
+
+header nav ul {
+  margin-left: 43%;
+  width: 42%;
+  float: left;
+  padding: 0;
+}
+
+header nav li {
+  width: 16.66%;
+  float: left;
+}
+
+nav a {
+  font-size: 1.4rem;
+}
+header > img:last-child {
+  float: right;
+}
+
+header form {
+  width: 5%;
+  float: right;
+}
+header form input {
+  width: 100%;
+}
+
+
+
+
+/******************************************
+/* MAIN
+/*******************************************/
+
+main {
+  width: 100%;
+  float: left;
+}
+
+.main-text {
+  padding-left: 5%;
+  width: 60%;
+  float: left;
+}
+
+.main-img {
+  width: 40%;
+  float: left;
+}
+
+.main-text input {
+  width: 60%;
+  float: left;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 1px solid lightgrey;
+  border-right: none;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.main-text a {
+  width: 12rem;
+  float: left;
+  padding: 1rem;
+  border: 1px solid lightgrey;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  font-size: 2rem;
+  background: #FF8828;
+  color: white;
+  text-align: center;
+}
+
+.main-text section {
+  width: 100%;
+  float: left;
+}
+
+.main-text span {
+  width: 8%;
+  float: left;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+}
+.main-img img {
+  width: 100%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.about {
+  width: 100%;
+  float: left;
+  padding-top: 5%;
+  background-color: white;
+  background-image: url(../oats.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.about-img img {
+  width: 35%;
+  float: left;
+}
+
+.about-text {
+  width: 45%;
+  float: left;
+  padding-left: 2%;
+}
+
+.about-text a {
+  width: 15rem;
+  float: left;
+  margin: 2rem 0 10rem 0;
+  padding: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  background: #FF8828;
+  color: white;
+  text-align: center;
+}
+
+.about-text h2 {
+  white-space: pre-line;
+}
+
+/******************************************
+/* RECIPES
+/*******************************************/
+
+.recipes {
+  width: 100%;
+  float: left;
+  padding-top: 2%;
+}
+
+.recipes h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.recipes h2 {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.recipes ul {
+  padding: 0 31%;
+  width: 100%;
+  float: left;
+}
+.recipes a {
+  width: 8%;
+  font-size: 1.5rem;
+  float: left;
+  border-bottom: 0.3rem solid #FFAA58;
+  margin: 5rem 0;
+  text-align: center;
+}
+.recipes-img {
+  padding: 0 20%;
+  float: left;
+  width: 100%;
+}
+
+.recipes-img img + img {
+  width: 60.7%;
+  margin-bottom: 10rem;
+}
+/******************************************
+/* BOOK
+/*******************************************/
+
+.book {
+  width: 100%;
+  float: left;
+  background: white;
+}
+
+.book-text h3 {
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+.book-text h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.book-call {
+  margin: 0 auto;
+  width: 8%;
+}
+
+.book-call img {
+  width: 80%;
+  float: left;
+  margin-left: 11%;
+}
+
+.book-call span {
+  text-align: center;
+  font-size: 2rem;
+  float: left;
+  width: 100%;
+}
+
+.book-text > span {
+  width: 50%;
+  float: left;
+  font-size: 2rem;
+}
+.schedule-day {
+}
+.book-text > span:nth-child(odd) {
+  padding-left: 28%;
+}
+
+.book-text > span:nth-child(even) {
+  padding-left: 23%;
+}
+.book-img {
+  margin: 28%;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
