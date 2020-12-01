@@ -199,10 +199,103 @@ main h3 {
 
 .style {
   width: 100vw;
+  padding-top: 5%;
 }
 
-.style section {
+.style > section {
   width: 25%;
   float: left;
-  padding: 0 12%;
+  margin: 0 2%;
+}
+.style > section:first-child {
+  margin-left: 8%;
+}
+
+.style section section {
+  float: left;
+  width: 90%;
+  margin: 0 5%;
+  background: black;
+  color: white;
+  position: relative;
+  bottom: 2.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.style img {
+  width: 100%;
+}
+
+/******************************************
+/* promo
+/*******************************************/
+
+.promo {
+  width: 100vw;
+  margin-top: 70rem;
+}
+
+.promo section {
+  height: 56.2rem;
+  background: linear-gradient(90deg, rgba(243,244,246,1) 0%, rgba(238,236,237,1) 100%);
+  width: 40%;
+  float: left;
+}
+
+.promo section:first-child {
+  margin-left: 10%;
+}
+
+.promo section:last-child {
+  margin-right: 10%;
+  background: #eeeced;
+}
+
+.promo section img {
+  width: 100%;
+}
+
+.promo h2 {
+  white-space: pre-line;
+  padding-left: 10%;
+}
+
+.promo h3 {
+  padding-left: 10%;
+  padding-top: 20%;
+}
+
+.promo .btn {
+  margin-left: 10%;
+}
+
+
+/******************************************
+/* haircuts
+/*******************************************/
+
+.haircuts {
+  width: 84vw;
+  margin-top: 140rem;
+  margin-left: 10%;
+}
+
+.haircuts section {
+  width: 33.33%;
+  float: left;
+  padding: 1.5rem;
+  line-height: 6rem;
+
+}
+
+.haircuts section:first-child {
+}
+
+.haircuts h2 {
+  text-align: center;
+}
+
+.haircuts img {
+  width: 100%;
 }
