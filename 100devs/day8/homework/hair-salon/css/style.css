@@ -79,7 +79,7 @@ ion-icon {
 
 }
 /******************************************
-/* LAYOUT
+/* header
 /*******************************************/
 header {
   width: 100vw;
@@ -298,4 +298,127 @@ main h3 {
 
 .haircuts img {
   width: 100%;
+}
+
+.hamburger {
+  display: none;
+}
+
+/******************************************
+/* mobile
+/*******************************************/
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .hamburger {
+
+    display: block;
+    width: 3rem;
+    float: left;
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .hamburger div {
+    border-bottom: 2px solid black;
+    padding-top: 1rem;
+  }
+
+  header > a {
+    float: right;
+    padding: 0;
+    width: 50%;
+    text-align: right;
+
+  }
+  aside {
+    display: none;
+  }
+
+  main h1 {
+    text-align: center;
+    padding: 0;
+    padding-top: 2rem;
+    font-size: 8rem;
+  }
+  main h3 {
+    padding: 0;
+    text-align: center;
+  }
+  main .btn {
+    float: left;
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 15rem;
+  }
+  .about {
+    padding: 0;
+    margin-top: 80%;
+    height: 50rem;
+  }
+  .about section {
+    width: 100%;
+  }
+  .style section section {
+    position: static;
+  }
+  .style img {
+    display: block;
+  }
+
+  .style {
+    margin: 10% 0;
+
+  }
+
+  .promo {
+    margin-top: 60%;
+  }
+
+  .promo section:last-child {
+    width: 100%;
+  }
+
+  .promo img {
+    display: block;
+  }
+
+  .promo section:first-child {
+    width: 100%;
+    margin: 0;
+  }
+
+  .haircuts * {
+    float: left;
+  }
+
+  .haircuts h2 {
+    margin-top: 10%;
+  }
+
+  .haircuts img {
+    display: block;
+    padding: 0.5rem;
+  }
+
+  .haircuts section {
+    padding: 0;
+  }
+
+
+
+
+
+
 }
