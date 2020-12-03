@@ -1,0 +1,20 @@
+#!/home/sero/.node/bin/node
+/*List of words
+Write a program that asks the user for a word until the user types "stop". The program then
+shows each of these words, except "stop".*/
+
+/* node module: npm install prompt-sync */
+const prompt = require("prompt-sync")();
+
+const list = []
+function validate() {
+  const name = prompt("Give me a word, please\t");
+  if (name === "stop") {
+  } else {
+    list.push(name)
+    validate()
+  }
+}
+
+validate()
+console.log(list)

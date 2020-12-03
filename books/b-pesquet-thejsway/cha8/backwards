@@ -1,0 +1,11 @@
+#!/home/sero/.node/bin/node
+
+/*Backwards word
+Improve the previous program so that it shows the word written backwards.*/
+
+const word = prompt("gimme a word!")
+const wordArray = Array.from(word)
+wordArray.reverse()
+wordArray.join()
+console.log(wordArray.join(""))
+

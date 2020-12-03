@@ -1,0 +1,7 @@
+#!/home/sero/.node/bin/node
+const name = "Sarah";
+const nameArray = Array.from(name);
+console.log(nameArray)
+nameArray.forEach(letter => {
+console.log(letter);
+});

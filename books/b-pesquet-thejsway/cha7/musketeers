@@ -1,0 +1,29 @@
+#!/home/sero/.node/bin/node
+/*Write a program that:
+• Creates an array named musketeers containing values “Athos”, “Porthos” and “Aramis”.
+• Shows each array element using a for loop.
+• Adds the “D’Artagnan” value to the array.
+• Shows each array element using the forEach() method.
+• Remove poor Aramis.
+• Shows each array element using a for-of loop.*/
+
+musketeers = [ "Athos", "Porthos", "Aramis" ]
+
+for (let i = 0; i < musketeers.length; i++) {
+  console.log(musketeers[i])
+}
+
+musketeers.push("D’Artagnan")
+
+console.log("next loop")
+
+musketeers.forEach( musketeer => {
+  console.log(musketeer)
+})
+
+musketeers.splice(2, 1)
+console.log("next loop")
+
+for (const musketeer of musketeers) {
+  console.log(musketeer)
+}

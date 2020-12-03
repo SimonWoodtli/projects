@@ -1,0 +1,9 @@
+#!/home/sero/.node/bin/node
+
+/*Word info
+Write a program that asks you for a word then shows its length, lowercase, and uppercase values.*/
+
+let word = prompt("Give me a word!")
+console.log(word.length)
+console.log(word.toLowerCase())
+console.log(word.toUpperCase())
