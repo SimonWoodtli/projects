@@ -2,7 +2,7 @@
 
 This repo has all my mini projects and exercises listed. They come from different study sources and are organized as such. Feel free to look around and pilfer what you find interesting.
 
-- 100devs is an online [bootcamp](https://www.twitch.tv/learnwithleon) and community
+- [100devs](https://www.twitch.tv/learnwithleon) is an online bootcamp and community
 - books contains exercises from various books
 - [cs50](https://www.edx.org/cs50) is an introduction to computer science course
 - [exercism](https://exercism.io/) is an online platform that provides free coding practice and mentorship
