@@ -1,0 +1,56 @@
+#!/home/sero/.node/bin/node
+/* Character inventory
+Improve the example RPG to add character inventory management according to the following
+rules:
+• A character’s inventory contains a number of gold and a number of keys.
+• Each character begins with 10 gold and 1 key.
+• The character description must show the inventory state.
+• When a character slays another character, the victim’s inventory goes to its vanquisher.*/
+
+class character {
+  constructor(name, health, strength) {
+    this.name = name
+    this.health = health
+    this.strength = strength
+    this.xp = 0
+    this.gold = 10
+    this.key = 1
+  }
+  describe() { return `${this.name} has ${this.health} health points, ${this.strength} as strength, ${this.xp} XP points, ${this.gold} gold and ${this.key} key(s)`
+  }
+  attack(target) {
+    if (this.health > 0) {
+      const damage = this.strength
+      console.log(`${this.name} attack ${target.name} and causes ${damage} damage points`)
+      target.health -= damage
+      if (target.health > 0) {
+        console.log(`${target.name} has ${target.health} health points left`)
+      } else {
+        target.health = 0
+        const bonusXP = 10
+        this.key += target.key
+        this.gold += target.gold
+        target.key = 0
+        target.gold = 0
+        console.log(`${this.name} eliminated ${target.name} and wins ${bonusXP} experience points as well as ${target.key} key(s) and ${target.gold} gold`)
+        this.xp += bonusXP
+      }
+    } else {
+      console.log(`${this.name} can't attack (they've been eliminated)`)
+    }
+  }
+
+}
+
+console.log("Welcome to the adventure! Here are our heroes:")
+const mini = new character("mini", 150, 10)
+const webo = new character("webo", 180, 20)
+const goblin = new character("goblin", 30, 5)
+
+console.log(mini.describe())
+console.log(webo.describe())
+mini.attack(goblin)
+goblin.attack(mini)
+webo.attack(goblin)
+console.log(mini.describe())
+console.log(webo.describe())

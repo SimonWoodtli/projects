@@ -1,0 +1,29 @@
+#!/home/sero/.node/bin/node
+/*Account list
+Let’s build upon a previous account object exercise. A bank account is still defined by:
+• A name property.
+• A balance property, initially set to 0.
+• A credit method adding the value passed as an argument to the account balance.
+• A describe method returning the account description.
+Write a program that creates three accounts: one belonging to Sean, another to Brad and the
+third one to Georges. These accounts are stored in an array. Next, the program credits 1000 to
+each account and shows its description.*/
+
+class account {
+  constructor(name) {
+    this.name = name
+    this.balance = 0
+  }
+  credit(amount) { return this.balance += amount }
+  describe() { return `The account of ${this.name} has a current standing of ${this.balance}$` }
+}
+
+const sean = new account("Sean")
+const seanArray = [ sean ]
+const brad = [ new account("Bread") ]
+const george = [ new account("George") ]
+console.log(seanArray[0].describe())
+/*console.log(sean.describe())
+sean.credit(100)
+console.log(sean.describe())
+console.log(seanArray)*/
