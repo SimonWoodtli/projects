@@ -1,3 +1,4 @@
-*.css linguist-vendored=true
-*.html linguist-vendored=true
+*.css linguist-linguist-detectable=false
+*.html linguist-detectable=false
+# *.html linguist-vendored=true
 *.sql linguist-detectable=true
