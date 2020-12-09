@@ -1,0 +1,31 @@
+#!/home/sero/.node/bin/node
+/*Arrays sum
+Complete the following program to compute and show the total sum of the values in each of the
+arrays.*/
+
+const arrays = [[1, 4], [11], [3, 5, 7]];
+// TODO: compute the value of the arraysSum variable
+//
+//console.log(arraysSum); // Should show 31
+
+const test = [1,2,3,4,5,]
+
+const sum = array => array.reduce((sum, value) => sum + value)
+const sums = lists => lists.map(sum)
+
+const sumInnerArrays = lists => lists.map(array => array.reduce((sum, value) => sum + value))
+
+// how to add the three sums from outer array??
+//const sumOuterArray = arrays.reduce((sum, array) => sum + sumInnerArrays(sums))
+
+
+
+console.log(sumInnerArrays(arrays))
+//console.log(sumOuterArray(arrays))
+console.log(sums(arrays))
+//console.log(sum(arrays))
+//console.log(sum(test))
+
+
+
+
