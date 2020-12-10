@@ -1,0 +1,30 @@
+#!/home/sero/.node/bin/node
+/*Handling attributes
+Here is the description of several musical instruments.
+<h1>Some musical instruments</h1>
+<ul>
+<li id="clarinet" class="wind woodwind">
+The <a href="https://en.wikipedia.org/wiki/Clarinet">clarinet</a>
+</li>
+<li id="saxophone" class="wind woodwind">
+The <a href="https://en.wikipedia.org/wiki/Saxophone">saxophone</a>
+</li>
+<li id="trumpet" class="wind brass">
+The <a href="https://en.wikipedia.org/wiki/Trumpet">trumpet</a>
+</li>
+<li id="violin" class="chordophone">
+The <a href="https://en.wikipedia.org/wiki/Violin">violin</a>
+</li>
+</ul>
+Write a JavaScript program containing a linkInfo() function that shows:
+• The total number of links.
+• The target of the first and last links.
+  This function should work even if no links are present.*/
+
+function linkInfo() {
+  const linksTotal = document.querySelectorAll("a").length
+  if ( linksTotal != 0) {
+    const firstLink = document.querySelector("a").href
+    const lastLink = document.querySelectorAll("a").lastChild.href
+  }
+}

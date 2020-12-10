@@ -1,0 +1,16 @@
+#!/home/sero/.node/bin/node
+/*Counting elements
+Here is some HTML code (content is by French poet Paul Verlaine).
+<h1>Mon rêve familier</h1>
+<p>Je fais souvent ce rêve <span class="adjective">étrange</span> et <span class=\
+"adjective">pénétrant</span></p>
+<p>D'une <span>femme <span class="adjective">inconnue</span></span>, et que j'aim\
+e, et qui m'aime</p>
+<p>Et qui n'est, chaque fois, ni tout à fait la même</p>
+<p>Ni tout à fait une autre, et m'aime et me comprend.</p>
+Complete the following program to write the countElements() function, that takes a CSS selector
+as a parameter and returns the number of corresponding elements.*/
+
+function countElements(cssSelec) {
+  return document.querySelectorAll(cssSelec).length
+}
