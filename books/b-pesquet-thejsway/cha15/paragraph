@@ -1,0 +1,3 @@
+#!/home/sero/.node/bin/node
+const paragraph = document.querySelector(".language")
+paragraph.innerHTML = <a href="https://en.wikipedia.org/wiki/List_of_programming_languages">Link to WIKI</a>

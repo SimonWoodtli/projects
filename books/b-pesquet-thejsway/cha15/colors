@@ -1,0 +1,34 @@
+#!/home/sero/.node/bin/node
+/*Updating colors
+The following HTML content defines three paragraphs.
+
+  <h1>Paragraph 1</h1>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim fri\
+ngilla dapibus. Curabitur placerat efficitur molestie. Quisque quis consequat nib\
+h. Aenean feugiat, eros eget aliquam vulputate, leo augue luctus lectus, non lobo\
+rtis libero quam non sem. Aliquam sit amet tincidunt ex, mollis interdum massa.</\
+div>
+<h1>Paragraph 2</h1>
+<div>Vivamus at justo blandit, ornare leo id, vehicula urna. Fusce sed felis eget\
+magna viverra feugiat eget nec orci. Duis non massa nibh. Aenean vehicula velit \
+a magna lobortis tempor ut quis felis. Proin vitae dui a eros facilisis fringilla\
+ut ut ante.</div>
+<h1>Paragraph 3</h1>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet phare\
+tra massa. Nulla blandit erat nulla, et scelerisque libero varius ut. Praesent bi\
+bendum eu magna ullamcorper venenatis. Sed ut pellentesque leo. Sed ultrices sapi\
+en consequat odio posuere gravida.</div>
+
+  Write a program that asks the user for the new text color, and then asks for the new background
+color. The page is then updated accordingly.*/
+
+
+const colorText = prompt("please give me a color")
+const colorBackground = prompt("please give me another color")
+
+const divElements = Array.from(document.querySelectorAll("div"))
+divElements.forEach( divElement => {
+  divElement.style.color = colorText
+  divElement.style.background = colorBackground
+})
+

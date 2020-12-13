@@ -1,0 +1,18 @@
+#!/home/sero/.node/bin/node
+/*Newspaper list
+Here is the HTML code of a web page.
+<h3>Some newspapers</h3>
+<div id="content"></div>
+Write a program that shows on the page a list of newspapers defined in a JavaScript array. Each
+link must be clickable.*/
+
+const newspapersUL = document.createElement("ul")
+document.querySelector("#content").appendChild(newspapersUL)
+
+for (let i = 0; i <= 5; i++) {
+  const newspaperElement = document.createElement("li")
+  newspaperElement.innerHTML = <a href="#">"news"+i</a>
+  document.querySelector("ul").appendChild(newspaperElement)
+}
+
+

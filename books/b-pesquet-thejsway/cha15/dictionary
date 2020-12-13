@@ -1,0 +1,36 @@
+#!/home/sero/.node/bin/node
+/*Mini-dictionary
+Here is the HTML code of a web page.
+<h3>A mini-dictionary</h3>
+<div id="content"></div>
+
+Write a program that shows on the page a list of terms and definitions defined in a JavaScript
+array.
+
+Use the HTML <dl> tag to create the list (more on this tag³). Each term of the dictionary should
+be given more importance with a <strong> tag.*/
+
+const words = [{
+term: "Procrastination",
+definition: "Avoidance of doing a task that needs to be accomplished"
+}, {
+term: "Tautology",
+definition: "logical argument constructed in such a way that it is logically ir\
+refutable"
+}, {
+term: "Oxymoron",
+definition: "figure of speech that juxtaposes elements that appear to be contra\
+dictory"}];
+
+const parent = document.querySelector("#content")
+const element = document.createElement("dl")
+element.id = "list"
+parent.appendChild(element)
+words.forEach( word => {
+  const term = document.createElement("dt")
+  const desc = document.createElement("dd")
+  term.textContent = word["term"]
+  desc.textContent = word["definition"]
+  document.querySelector("#list").appendChild(term)
+  document.querySelector("#list").appendChild(desc)
+}

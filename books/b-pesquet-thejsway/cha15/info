@@ -1,0 +1,15 @@
+#!/home/sero/.node/bin/node
+/*Write a program that adds to the page a list showing the height and width of the element
+identified by “content”.*/
+const parent = document.querySelector("body")
+const list = document.createElement("ul")
+const liElements = ["ABC", "Easy as", "One,two,three"]
+
+parent.appendChild(list)
+liElements.forEach( liElement => {
+  const ele = document.createElement("li")
+  ele.textContent = liElement
+  document.querySelector("ul").appendChild(ele)
+  console.log(document.querySelector("li").style.height)
+})
+
