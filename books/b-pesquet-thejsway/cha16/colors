@@ -1,0 +1,42 @@
+#!/home/sero/.node/bin/node
+/*Here is some HTML content to start with.
+<p>Press the R (red), Y (yellow), G (green) or B (blue) key to change paragraph c\
+olors accordingly.</p>
+<h1>Paragraph 1</h1>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim fri\
+ngilla dapibus. Curabitur placerat efficitur molestie. Quisque quis consequat nib\
+h. Aenean feugiat, eros eget aliquam vulputate, leo augue luctus lectus, non lobo\
+rtis libero quam non sem. Aliquam sit amet tincidunt ex, mollis interdum massa.</\
+div>
+<h1>Paragraph 2</h1>
+<div>Vivamus at justo blandit, ornare leo id, vehicula urna. Fusce sed felis eget\
+magna viverra feugiat eget nec orci. Duis non massa nibh. Aenean vehicula velit \
+a magna lobortis tempor ut quis felis. Proin vitae dui a eros facilisis fringilla\
+ut ut ante.</div>
+<h1>Paragraph 3</h1>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet phare\
+tra massa. Nulla blandit erat nulla, et scelerisque libero varius ut. Praesent bi\
+bendum eu magna ullamcorper venenatis. Sed ut pellentesque leo. Sed ultrices sapi\
+en consequat odio posuere gravida.</div>
+
+Write the associated JavaScript code that updates the background color of all div tags according
+to the key (R, Y, G or B) pressed by the user.*/
+
+const divElements = document.querySelectorAll("div")
+
+document.addEventListener("keypress", e => {
+  let key = String.fromCharCode(e.charCode).toLowerCase()
+  let color = ""
+  switch (key) {
+    case "r":
+      color = "red";
+      break;
+    case "b":
+      color = "blue"
+      break;
+    default:
+      alert(`Get a valid key bro! This ${key} key is not supported`)
+  } Array.from(divElements).forEach( divElement => {
+    divElement.style.backgroundColor = color})
+})
+

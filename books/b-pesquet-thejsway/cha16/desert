@@ -1,0 +1,19 @@
+#!/home/sero/.node/bin/node
+/*A dessert list
+The following HTML code defines a list of desserts, empty for now.
+<h1>My favourite desserts</h1>
+<ul id="desserts">
+</ul>
+<button id="addButton">Add a dessert</button>
+Write the JavaScript code that adds a new dessert to the list when the user clicks on the button.
+The dessert name is chosen by the user.
+Bonus points for adding the possibility of changing a dessert’s name when clicking on it.*/
+
+
+document.querySelector("#addButton").addEventListener("click", () => {
+  const desertName = prompt("give me a desert please")
+  const desert = document.createElement("li")
+  desert.textContent = desertName
+  document.querySelector("ul").appendChild(desert)
+})
+
