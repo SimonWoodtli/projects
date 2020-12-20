@@ -33,10 +33,26 @@ const weekday = day => {
     alert("Try again!")
   }
 }
+
+// Leons version, he meant not entering a day of the week as in calling
+// the function without an argument
+const weekday = (day = "default") => {
+  day = day.toLowerCase()
+  if (day === "saturday" || day === "sunday") {
+    alert("weekend")
+  } else if (day === "default")
+    alert("Try again!")
+  else {
+    alert("week day")
+  }
+}
+
+
+
 //*Loops*
 //Create a function that takes in a number. Console log all values from 1 to that number or greater, but count by 3
 const loopNum = n1 => {
-  for (let i = 0; i <= n1; i+=3;) {
+  for (let i = 1; i <= n1; i+=3;) {
     console.log(i)
   }
 }
