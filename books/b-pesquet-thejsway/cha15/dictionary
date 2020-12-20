@@ -33,4 +33,4 @@ words.forEach( word => {
   desc.textContent = word["definition"]
   document.querySelector("#list").appendChild(term)
   document.querySelector("#list").appendChild(desc)
-}
+})
