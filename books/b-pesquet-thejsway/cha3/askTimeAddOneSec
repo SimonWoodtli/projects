@@ -1,4 +1,7 @@
 #!/home/sero/.node/bin/node
+const range = (start, end, length = end - start + 1) =>
+  Array.from({ length }, (_, i) => start + i)
+
 
 let time = prompt("What time is it")
 let hour = Number(time.slice(0,2))
@@ -6,7 +9,7 @@ let minute = Number(time.slice(3,5))
 //let second = Number(time.slice(6,8) + 1) // this doesn't work why?
 let second = Number(time.slice(6,8))
 // to-do: figure out how the valid input works
-while (time !== range(0,24)"h"range(0,59)"m"range(0,59)"s") {
+while (hour !== range(0,24) || minute !== range(0,59) || second !== range(0,59)) {
   console.log("invalid input please enter a time as 00h00m00s")
   time = prompt("What time is it")
 }
@@ -22,5 +25,3 @@ if (hour > 24) {
   hour = 0
 }
 console.log(`${hour}h${minute}m${second}s`)
-
-

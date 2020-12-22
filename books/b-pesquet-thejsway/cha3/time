@@ -1,0 +1,26 @@
+#!/home/sero/.node/bin/node
+
+const timePrompt = () => {
+  const timeCheck = /[0-9]{2}[h][0-9]{2}[m][0-9]{2}[s]/;
+  let time = prompt("What time is it")
+  while (!timeCheck.test(time)) {
+    console.log("invalid input please enter a time as 00h00m00s")
+    time = prompt("What time is it")
+  }
+  let hour = Number(time.slice(0,2))
+  let minute = Number(time.slice(3,5))
+  let second = Number(time.slice(6,8))
+  second++
+  if (second > 59) {
+    second = 0
+    minute++
+  } if (minute > 59) {
+    minute = 0
+    hour++
+  }
+  if (hour > 24) {
+    hour = 1
+  }
+  console.log(`${hour}h${minute}m${second}s`)
+}
+timePrompt()
