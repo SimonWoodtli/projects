@@ -1,0 +1,3 @@
+#!/home/sero/.node/bin/node
+const passphrase = "Open Sesame"
+console.log(passphrase.length)

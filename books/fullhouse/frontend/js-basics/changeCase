@@ -1,0 +1,4 @@
+#!/home/sero/.node/bin/node
+const passphrase = "Open Sesame"
+passphrase.toUpperCase()
+passphrase.toLowerCase()
