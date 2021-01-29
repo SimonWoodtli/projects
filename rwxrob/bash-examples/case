@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+read -p "Did you like the answer ? [Y/N]" -n 1 answer
+case $answer in
+  y|Y) echo "good boy" ;;
+  n|N) echo "think again"
+       ./test
+esac
