@@ -1,7 +1,8 @@
-#!/usr/bin/bash
+#!/bin/bash
+## -n 1 -> no return needed
 read -p "Did you like the answer ? [Y/N]" -n 1 answer
+
 case $answer in
-  y|Y) echo "good boy" ;;
-  n|N) echo "think again"
-       ./test
+  y|Y) echo "sure do" ;;
+  n|N) echo "nope" ;;
 esac
