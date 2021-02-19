@@ -1,0 +1,10 @@
+#!/bin/bash
+# Shell function demo
+function step2 {
+echo "Step 2"
+return # exit function no value can be returned!
+}
+# Main program starts here
+echo "Step 1"
+step2
+echo "Step 3"
