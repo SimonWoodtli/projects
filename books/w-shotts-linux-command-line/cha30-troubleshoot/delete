@@ -1,0 +1,24 @@
+#!/bin/bash
+
+[[ -d "$dir_name" ]] && cd "$dir_name" && rm ./*
+# Delete files in directory $dir_name
+if [[ ! -d "$dir_name" ]]; then
+echo "No such directory: '$dir_name'" >&2
+exit 1
+fi
+if ! cd "$dir_name"; then
+echo "Cannot cd to '$dir_name'" >&2
+exit 1
+fi
+if ! rm ./*; then # ./ -> it prevents a filename starting with a hyphen
+  # from being interpreted as a command option.
+echo "File deletion failed. Check results" >&2
+exit 1
+fi
+#Here, we check both the name, to see that it is an existing directory, and the success of
+#the cd command. If either fails, a descriptive error message is sent to standard error, and
+#the script terminates with an exit status of one to indicate a failure.
+
+#As a general rule, always precede wildcards (such as * and ?) with ./ to preven
+#misinterpretation by commands. This includes things like *.pdf and ???.mp3, for ex
+#ample.
