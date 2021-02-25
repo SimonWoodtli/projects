@@ -1,0 +1,19 @@
+#!/bin/bash
+# posit-param: script to view command line parameters
+echo "
+\$0 = $0
+\$1 = $1
+\$2 = $2
+\$3 = $3
+\$4 = $4
+\$5 = $5
+\$6 = $6
+\$7 = $7
+\$8 = $8
+\$9 = $9
+"
+#This is a simple script that displays the values of the variables $0-$9
+
+#Note: You can actually access more than nine parameters using parameter expan-
+#sion. To specify a number greater than nine, surround the number in braces as in
+#${10}, ${55}, ${211}, and so on.

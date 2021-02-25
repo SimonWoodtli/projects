@@ -1,0 +1,15 @@
+#!/bin/bash
+# posit-param2: script to display all arguments
+count=1
+while [[ $# -gt 0 ]]; do
+  echo "Argument $count = $1"
+  count=$((count + 1))
+  shift
+done
+#Each time shift is executed, the value of $2 is moved to $1, the value of $3 is moved
+#to $2 and so on. The value of $# is also reduced by one.
+#In the posit-param2 program, we create a loop that evaluates the number of argu-
+#ments remaining and continues as long as there is at least one. We display the current ar-
+#gument, increment the variable count with each iteration of the loop to provide a run-
+#ning count of the number of arguments processed, and, finally, execute a shift to load
+#$1 with the next argument. Here is the program at work:
