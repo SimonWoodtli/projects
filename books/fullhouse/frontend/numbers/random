@@ -1,0 +1,15 @@
+#!/usr/sbin/node
+// Collect input from a user
+const input = prompt("Give me a number")
+
+// Convert the input to a number
+const inputNum = Number(input)
+
+
+// Use Math.random() and the user's number to generate a random number
+const random = Math.floor( Math.random() * inputNum ) + 1;
+
+
+// Create a message displaying the random number
+console.log(`The random number is ${random} and between 1 and ${inputNum}.`)
+

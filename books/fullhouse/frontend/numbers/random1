@@ -1,0 +1,19 @@
+#!/usr/sbin/node
+// Collect input from a user
+const input = prompt("Give me a number")
+
+// Convert the input to a number
+const inputNum = Number(input)
+
+// if Number(input) gets string passed it throws a NaN and returns
+// undefined which is a falsy boolean value. So if input stores a string
+// the if evalutes to false and else executes.
+if (inputNum) {
+  // Use Math.random() and the user's number to generate a random number
+  const random = Math.floor( Math.random() * inputNum ) + 1;
+  // Create a message displaying the random number
+  console.log(`The random number is ${random} and between 1 and ${inputNum}.`)
+} else {
+  console.log("You need to provide a number. Try again.")
+}
+

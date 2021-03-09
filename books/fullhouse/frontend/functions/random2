@@ -1,0 +1,14 @@
+#!/usr/sbin/node
+/**
+ * Returns a random number between two numbers.
+ *
+ * @param {number} lower - The lowest number value.
+ * @param {number} upper - The highest number value.
+ * @return {number} The random number value.
+ */
+const randomNum = (upper, lower) => {
+  return (
+    (isNaN(upper) || isNaN(lower))? Error("give numbers as arguments please"):
+    Math.floor(Math.random() * (lower - upper + 1)) + upper
+);}
+console.log(randomNum("he",3))

@@ -1,0 +1,7 @@
+#!/usr/sbin/node
+function sayGreeting(greeting = "Good morning", name = "student") {
+  return `${greeting}, ${name}!`
+}
+
+
+console.log(sayGreeting( undefined, "Peter"))

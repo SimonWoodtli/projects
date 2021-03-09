@@ -1,0 +1,13 @@
+#!/usr/sbin/node
+/**
+ * [A short description of the myFunc function]
+ *
+ * @param {[param type]} param1 - [parameter description]
+ * @param {[param type]} param2 - [parameter description]
+ * @returns {[return type]} [documents the function's return value]
+ */
+
+function myFunc( param1, param2 ) {
+  // function returns a value...
+}
+

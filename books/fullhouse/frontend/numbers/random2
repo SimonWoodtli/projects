@@ -1,0 +1,22 @@
+#!/usr/sbin/node
+// Collect input from a user
+const inputHigh = prompt("Give me a higher number")
+const inputLow = prompt("Give me a lower number")
+
+// Convert the input to a number
+const inputNumHigh = Number(inputHigh)
+const inputNumLow = Number(inputLow)
+
+
+// if Number(input) gets string passed it throws a NaN and returns
+// undefined which is a falsy boolean value. So if input stores a string
+// the if evalutes to false and else executes.
+if (inputNumHigh && inputNumLow) {
+  // Use Math.random() and the user's number to generate a random number
+  const random = Math.floor( Math.random() * (inputNumHigh - inputNumLow + 1) ) + inputNumLow
+  // Create a message displaying the random number
+  console.log(`The random number is ${random} and between ${inputNumLow} and ${inputNumHigh}.`)
+} else {
+  console.log("You need to provide two numbers. Try again.")
+}
+

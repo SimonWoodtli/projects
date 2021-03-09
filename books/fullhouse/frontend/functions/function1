@@ -1,0 +1,11 @@
+#!/usr/sbin/node
+function getRandomNumber() {
+  const randomNumber = Math.floor( Math.random() * 6 ) + 1;
+  return randomNumber;
+}
+
+alert( getRandomNumber() )
+console.log( getRandomNumber() )
+const dieRoll = getRandomNumber()
+// functions always return a value, if you don't have a return statement
+// it will just return "undefined"

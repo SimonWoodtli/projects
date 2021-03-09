@@ -1,0 +1,8 @@
+#!/usr/sbin/node
+
+const x = Number(prompt("Enter a number")) // accepts int&float
+const y = parseInt(prompt("Enter a number")) // only int otherwise -> parseFloat()
+const z = prompt("Enter a number") // accepts int&float
+
+console.log(x + y + +z) // option z: +"string" = unary plus
+
