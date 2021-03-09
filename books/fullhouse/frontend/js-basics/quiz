@@ -1,0 +1,73 @@
+#!/usr/sbin/node
+/*
+  1. Store correct answers
+   - When quiz begins, no answers are correct
+*/
+
+let question1 = false
+let question2 =  false
+let question3 =  false
+let question4 =  false
+let question5=  false
+
+// 2. Store the rank of a player
+let rank = 0
+
+
+// 3. Select the <main> HTML element
+const element = document.querySelector('main')
+
+
+/*
+  4. Ask at least 5 questions
+   - Store each answer in a variable
+   - Keep track of the number of correct answers
+*/
+question1 = prompt("How many states are in the USA?")
+question2.toLowerCase() = prompt("What's the name of the current president in the USA?")
+question3.toLowerCase() = prompt("What's the capital of France?")
+question4 = prompt("How many countries are in in the EU?")
+question5.toLowerCase() = prompt("Which language is used by the majority of all people in the world?")
+const solution1 = 50
+const solution2 = "joe biden"
+const solution3 = "paris"
+const solution4 = 27
+const solution5 = "english"
+
+/*
+  5. Rank player based on number of correct answers
+   - 5 correct = Gold
+   - 3-4 correct = Silver
+   - 1-2 correct = Bronze
+   - 0 correct = No crown
+*/
+
+if (question1 === solution1) {
+  rank+=1
+} if (question2 === solution2) {
+  rank+=1
+} if (question3 === solution3) {
+  rank+=1
+} if (question4 === solution4) {
+  rank+=1
+} if (question5 === solution5) {
+  rank+=1
+}
+
+const medal = ""
+if ( rank === 5 ) {
+  medal = "Gold";
+} else if ( rank >= 3 ) {
+  medal = "Silver";
+} else if ( rank >= 1 ) { // check for 1-2 correct
+  medal = "Bronze";
+} else {
+  medal = "None :(";
+}
+
+
+// 6. Output results to the <main> element
+
+const message = `the player got rank: ${rank}, well done you won the ${medal} medal!`
+element.textContent = message
+

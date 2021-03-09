@@ -1,0 +1,11 @@
+#!/usr/sbin/node
+const weather = "sun"
+if ( weather === "sun" ) {
+  console.log("It's sunny, so I'm going swimming.")
+} else if ( weater === "rain" ) {
+  console.log("It's rainining, so I will read a book.")
+} else if ( weater === "snow" ) {
+  console.log("It's snowing, so I'm going sledding.")
+} else {
+  console.log("I don't know what I'm doing today.")
+}
