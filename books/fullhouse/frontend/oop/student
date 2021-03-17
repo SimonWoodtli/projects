@@ -1,0 +1,23 @@
+#!/usr/bin/node
+class Student {
+  constructor(gpa, credits) {
+    this.gpa = gpa;
+    this.credits = credits;
+  }
+  stringGPA() {
+    return this.gpa.toString();
+  }
+  get level() {
+    const creditCheck = this.credits
+    (creditCheck <= 30) ? "Freshman": return;
+  }
+}
+    //(creditCheck >= 31 && creditCheck <= 60) ? "Sophomore":
+    //(creditCheck >= 61 && creditCheck <= 90) ? "Junior":
+    //(creditCheck >= 91) ? "Senior":
+
+
+const student = new Student(3.2, 29)
+console.log(student.level)
+//console.log(student)
+//console.log(student.stringGPA())
