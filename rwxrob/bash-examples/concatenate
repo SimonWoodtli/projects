@@ -1,0 +1,6 @@
+#!/bin/bash
+
+string1="Arch"
+string2=" Linux"
+string=$string1$string2
+echo "$string is great distro to really understand Linux."
