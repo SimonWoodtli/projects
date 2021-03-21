@@ -1,0 +1,4 @@
+#!/bin/bash
+Str="Learn Bash It's fun and stuff"
+subStr=${Str:0:20}
+echo $subStr
