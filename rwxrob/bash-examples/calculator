@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+declare -i a
+declare -i b
+declare +i op
+op="$1"; a="$2"; b="$3"
+add() {
+  local answer=$((a+b))
+  echo "$a + $b = $answer"
+}
+substract() {
+  local answer=$((a-b))
+  echo "$a - $b = $answer"
+}
+multiply() {
+  local answer=$((a*b))
+  echo "$a * $b = $answer"
+}
+divide() {
+  local answer=$((a/b))
+  echo "$a / $b = $answer"
+}
+
+# how can I get both in one statement using ||?
+[[ $# -eq 3 ]] || echo "Please use 3 parameters: operator num1 num2"
+[[ $# -eq 3 ]] || exit 1
+
+# same issue
+[[ "$op" =~ [asdm] ]] || echo "Operators must be: a,s,m,d"
+[[ "$op" =~ [asdm] ]] || exit 2
+
+case "$op" in
+  m) multiply;;
+  a) add;;
+  s) substract;;
+  d) divide;;
+  *) echo "$op is not a,s,m,d"; exit 2
+esac
