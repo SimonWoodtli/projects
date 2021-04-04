@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# bash functions can't return anything else but exit status. Hence the
+# echo is needed
+function Greet() {
+  str="Hello $name, how are you doing?"
+  echo $str
+}
+echo "-> what's your name?"
+read name
+
+val=$(Greet)
+echo -e "-> $val"
