@@ -1,0 +1,5 @@
+#!/bin/bash
+file='foo.txt' # file needs to be in same dir as script
+while read line; do
+  echo $line
+done < $file
