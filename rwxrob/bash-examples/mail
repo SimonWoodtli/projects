@@ -1,0 +1,5 @@
+#!/bin/bash
+recipient=”hello@world.com”
+subject=”Greetings Sir”
+message=”Welcome”
+`mail -s $subject $recipient <<< $message`
