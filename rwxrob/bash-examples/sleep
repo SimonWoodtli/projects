@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "How long should I wait?"
+read time
+sleep $time
+echo "Just waited for $time seconds!"
