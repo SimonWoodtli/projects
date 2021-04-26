@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Before appending the file"
+cat foo.txt
+echo "vim" >> foo.txt
+echo "After appending the file"
+cat foo.txt
