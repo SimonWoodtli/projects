@@ -1,0 +1,11 @@
+#!/usr/bin/python
+import random
+values = list(range(0,10))
+#print(max(values))
+random.shuffle(values)
+maxnumber = 0
+for number in values:
+    if number >= maxnumber:
+        maxnumber = number
+
+print(maxnumber)
