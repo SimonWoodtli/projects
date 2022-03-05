@@ -1,0 +1,130 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* 1rem = 10px */
+html{
+  font-size: 62.5%;
+}
+
+/* fix for buttons on ios safari mobile */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* responsive images */
+img {
+  width: 100%;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+p, h1, h2, a{
+  font-family: acumin-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+body {
+  background: #78CEE9;
+  border: 0.4rem solid #00CB4A;
+}
+h1{
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+}
+h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+
+}
+a{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00CB9D;
+}
+.aboutLink{
+  color: white;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.content:after{
+  display: inline-block;
+  font-size: 1.2rem;
+  content: "|";
+  color: grey;
+  margin-right: 0.5rem;
+  /*padding-bottom: 1rem;*/
+  vertical-align: top;
+  padding-left: 0.5rem;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  width: 40%;
+  margin: 2.5rem auto;
+  height: max-content;
+}
+header, section, footer{
+  margin: 0 5rem;
+}
+footer{
+  margin: 3rem 0 5rem 0;
+
+}
+li{
+  display: inline-block;
+}
+ul{
+  text-align: center;
+  padding: 0;
+}
+img{
+  float: right;
+  width: 25%;
+}
+p{
+  width: 75%;
+  margin: 0 inherit;
+}
+.firstP{
+  margin-top: 0;
+  display: inline-block;
+}
+
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
