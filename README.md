@@ -10,3 +10,7 @@ This repo has all my mini projects and exercises listed. They come from differen
 - [rwxrob](https://rwx.gg/) is an online Linux bootcamp and community
 - [treehouse](https://teamtreehouse.com/) is a coding platform
 - [udacity](https://www.udacity.com/) is another coding platform
+
+## Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/ec25410b966de14cbb6ecea02d982e6dcb7e42c8.svg "Repobeats analytics image")
